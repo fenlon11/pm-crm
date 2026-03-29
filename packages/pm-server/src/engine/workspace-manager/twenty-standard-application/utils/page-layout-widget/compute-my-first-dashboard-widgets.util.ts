@@ -188,7 +188,7 @@ const createWelcomeRichText = ({
             },
             {
               type: 'link',
-              href: 'https://docs.twenty.com/user-guide/introduction',
+              href: 'https://persistentmomentum.com/docs/user-guide/introduction',
               content: [
                 {
                   type: 'text',
