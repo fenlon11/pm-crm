@@ -31,6 +31,9 @@ export enum AppPath {
 
   Authorize = '/authorize',
 
+  // Public recruiter pages (no auth required)
+  JobApply = '/jobs/:workspaceId/:jobId',
+
   // 404 page not found
   NotFoundWildcard = '*',
   NotFound = '/not-found',

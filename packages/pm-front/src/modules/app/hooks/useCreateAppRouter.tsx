@@ -100,6 +100,12 @@ const NotFound = lazy(() =>
   })),
 );
 
+const JobApplyPage = lazy(() =>
+  import('~/pages/recruiter/JobApplyPage').then((module) => ({
+    default: module.JobApplyPage,
+  })),
+);
+
 export const useCreateAppRouter = (
   isFunctionSettingsEnabled?: boolean,
   isAdminPageEnabled?: boolean,
@@ -244,6 +250,14 @@ export const useCreateAppRouter = (
             element={
               <LazyRoute>
                 <Authorize />
+              </LazyRoute>
+            }
+          />
+          <Route
+            path={AppPath.JobApply}
+            element={
+              <LazyRoute>
+                <JobApplyPage />
               </LazyRoute>
             }
           />
