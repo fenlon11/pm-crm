@@ -10,66 +10,66 @@ COPY ./package.json ./yarn.lock ./.yarnrc.yml ./tsconfig.base.json ./nx.json /ap
 COPY ./.yarn/releases /app/.yarn/releases
 COPY ./.yarn/patches /app/.yarn/patches
 
-COPY ./packages/twenty-emails/package.json /app/packages/twenty-emails/
-COPY ./packages/twenty-server/package.json /app/packages/twenty-server/
-COPY ./packages/twenty-server/patches /app/packages/twenty-server/patches
-COPY ./packages/twenty-ui/package.json /app/packages/twenty-ui/
-COPY ./packages/twenty-shared/package.json /app/packages/twenty-shared/
-COPY ./packages/twenty-front/package.json /app/packages/twenty-front/
+COPY ./packages/pm-emails/package.json /app/packages/pm-emails/
+COPY ./packages/pm-server/package.json /app/packages/pm-server/
+COPY ./packages/pm-server/patches /app/packages/pm-server/patches
+COPY ./packages/pm-ui/package.json /app/packages/pm-ui/
+COPY ./packages/pm-shared/package.json /app/packages/pm-shared/
+COPY ./packages/pm-front/package.json /app/packages/pm-front/
 COPY ./packages/twenty-sdk/package.json /app/packages/twenty-sdk/
 COPY ./packages/twenty-client-sdk/package.json /app/packages/twenty-client-sdk/
 
 RUN yarn && yarn cache clean && npx nx reset
 
 
-FROM common-deps AS twenty-server-build
+FROM common-deps AS pm-server-build
 
-COPY ./packages/twenty-emails /app/packages/twenty-emails
-COPY ./packages/twenty-shared /app/packages/twenty-shared
-COPY ./packages/twenty-ui /app/packages/twenty-ui
+COPY ./packages/pm-emails /app/packages/pm-emails
+COPY ./packages/pm-shared /app/packages/pm-shared
+COPY ./packages/pm-ui /app/packages/pm-ui
 COPY ./packages/twenty-sdk /app/packages/twenty-sdk
 COPY ./packages/twenty-client-sdk /app/packages/twenty-client-sdk
-COPY ./packages/twenty-server /app/packages/twenty-server
+COPY ./packages/pm-server /app/packages/pm-server
 
-RUN npx nx run twenty-server:lingui:extract && \
-    npx nx run twenty-server:lingui:compile && \
-    npx nx run twenty-emails:lingui:extract && \
-    npx nx run twenty-emails:lingui:compile
+RUN npx nx run pm-server:lingui:extract && \
+    npx nx run pm-server:lingui:compile && \
+    npx nx run pm-emails:lingui:extract && \
+    npx nx run pm-emails:lingui:compile
 
-RUN npx nx run twenty-server:build
+RUN npx nx run pm-server:build
 
 # Bundle setup-db script into a standalone JS file so the final image
 # doesn't need tsx or the TypeScript source tree at runtime.
-RUN npx esbuild packages/twenty-server/scripts/setup-db.ts \
-      --bundle --platform=node --outfile=packages/twenty-server/dist/scripts/setup-db.js \
+RUN npx esbuild packages/pm-server/scripts/setup-db.ts \
+      --bundle --platform=node --outfile=packages/pm-server/dist/scripts/setup-db.js \
       --external:typeorm --external:dotenv --external:pg
 
 # Clean server build output (type declarations and compiled tests are not needed at runtime;
 # source maps are kept because twenty-infra extracts them from the image for Sentry uploads)
-RUN find /app/packages/twenty-server/dist -name '*.d.ts' -delete \
- && rm -rf /app/packages/twenty-server/dist/packages/twenty-server/test
+RUN find /app/packages/pm-server/dist -name '*.d.ts' -delete \
+ && rm -rf /app/packages/pm-server/dist/packages/pm-server/test
 
-RUN yarn workspaces focus --production twenty-emails twenty-shared twenty-sdk twenty-client-sdk twenty-server
+RUN yarn workspaces focus --production pm-emails pm-shared twenty-sdk twenty-client-sdk pm-server
 
 
-FROM common-deps AS twenty-front-build
+FROM common-deps AS pm-front-build
 
 ARG REACT_APP_SERVER_BASE_URL
 
-COPY ./packages/twenty-front /app/packages/twenty-front
-COPY ./packages/twenty-ui /app/packages/twenty-ui
-COPY ./packages/twenty-shared /app/packages/twenty-shared
+COPY ./packages/pm-front /app/packages/pm-front
+COPY ./packages/pm-ui /app/packages/pm-ui
+COPY ./packages/pm-shared /app/packages/pm-shared
 COPY ./packages/twenty-sdk /app/packages/twenty-sdk
 COPY ./packages/twenty-client-sdk /app/packages/twenty-client-sdk
-RUN npx nx run twenty-front:lingui:extract && \
-    npx nx run twenty-front:lingui:compile
+RUN npx nx run pm-front:lingui:extract && \
+    npx nx run pm-front:lingui:compile
 # To skip the memory-intensive frontend build, pre-build on the host:
-#   npx nx build twenty-front
-# The check below will use packages/twenty-front/build/ if it already exists.
-RUN if [ -d /app/packages/twenty-front/build ]; then \
+#   npx nx build pm-front
+# The check below will use packages/pm-front/build/ if it already exists.
+RUN if [ -d /app/packages/pm-front/build ]; then \
       echo "Using pre-built frontend from host"; \
     else \
-      NODE_OPTIONS="--max-old-space-size=8192" npx nx build twenty-front; \
+      NODE_OPTIONS="--max-old-space-size=8192" npx nx build pm-front; \
     fi
 
 
@@ -84,7 +84,7 @@ RUN apk add --no-cache curl jq postgresql-client
 
 COPY ./packages/twenty-docker/twenty/entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
-WORKDIR /app/packages/twenty-server
+WORKDIR /app/packages/pm-server
 
 ARG REACT_APP_SERVER_BASE_URL
 ENV REACT_APP_SERVER_BASE_URL=$REACT_APP_SERVER_BASE_URL
@@ -93,35 +93,35 @@ ARG APP_VERSION
 ENV APP_VERSION=$APP_VERSION
 
 # Workspace root config
-COPY --chown=1000 --from=twenty-server-build /app/package.json /app/yarn.lock /app/.yarnrc.yml /app/
-COPY --chown=1000 --from=twenty-server-build /app/tsconfig.base.json /app/nx.json /app/
-COPY --chown=1000 --from=twenty-server-build /app/.yarn /app/.yarn
-COPY --chown=1000 --from=twenty-server-build /app/node_modules /app/node_modules
+COPY --chown=1000 --from=pm-server-build /app/package.json /app/yarn.lock /app/.yarnrc.yml /app/
+COPY --chown=1000 --from=pm-server-build /app/tsconfig.base.json /app/nx.json /app/
+COPY --chown=1000 --from=pm-server-build /app/.yarn /app/.yarn
+COPY --chown=1000 --from=pm-server-build /app/node_modules /app/node_modules
 
 # Server package (compiled dist + package.json only, no src/)
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-server/package.json /app/packages/twenty-server/
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-server/dist /app/packages/twenty-server/dist
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-server/patches /app/packages/twenty-server/patches
+COPY --chown=1000 --from=pm-server-build /app/packages/pm-server/package.json /app/packages/pm-server/
+COPY --chown=1000 --from=pm-server-build /app/packages/pm-server/dist /app/packages/pm-server/dist
+COPY --chown=1000 --from=pm-server-build /app/packages/pm-server/patches /app/packages/pm-server/patches
 
 # Workspace packages (dist + package.json; node_modules symlinks resolve to these)
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-shared/package.json /app/packages/twenty-shared/
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-shared/dist /app/packages/twenty-shared/dist
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-emails/package.json /app/packages/twenty-emails/
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-emails/dist /app/packages/twenty-emails/dist
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-sdk/package.json /app/packages/twenty-sdk/
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-client-sdk/package.json /app/packages/twenty-client-sdk/
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-client-sdk/dist /app/packages/twenty-client-sdk/dist
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-ui/package.json /app/packages/twenty-ui/
-COPY --chown=1000 --from=twenty-server-build /app/packages/twenty-front/package.json /app/packages/twenty-front/
+COPY --chown=1000 --from=pm-server-build /app/packages/pm-shared/package.json /app/packages/pm-shared/
+COPY --chown=1000 --from=pm-server-build /app/packages/pm-shared/dist /app/packages/pm-shared/dist
+COPY --chown=1000 --from=pm-server-build /app/packages/pm-emails/package.json /app/packages/pm-emails/
+COPY --chown=1000 --from=pm-server-build /app/packages/pm-emails/dist /app/packages/pm-emails/dist
+COPY --chown=1000 --from=pm-server-build /app/packages/twenty-sdk/package.json /app/packages/twenty-sdk/
+COPY --chown=1000 --from=pm-server-build /app/packages/twenty-client-sdk/package.json /app/packages/twenty-client-sdk/
+COPY --chown=1000 --from=pm-server-build /app/packages/twenty-client-sdk/dist /app/packages/twenty-client-sdk/dist
+COPY --chown=1000 --from=pm-server-build /app/packages/pm-ui/package.json /app/packages/pm-ui/
+COPY --chown=1000 --from=pm-server-build /app/packages/pm-front/package.json /app/packages/pm-front/
 
 # Frontend static build
-COPY --chown=1000 --from=twenty-front-build /app/packages/twenty-front/build /app/packages/twenty-server/dist/front
+COPY --chown=1000 --from=pm-front-build /app/packages/pm-front/build /app/packages/pm-server/dist/front
 
 LABEL org.opencontainers.image.source=https://github.com/twentyhq/twenty
 LABEL org.opencontainers.image.description="Production Twenty image with backend and frontend."
 
-RUN mkdir -p /app/.local-storage /app/packages/twenty-server/.local-storage && \
-    chown 1000:1000 /app/.local-storage /app/packages/twenty-server/.local-storage
+RUN mkdir -p /app/.local-storage /app/packages/pm-server/.local-storage && \
+    chown 1000:1000 /app/.local-storage /app/packages/pm-server/.local-storage
 
 USER 1000
 
@@ -169,32 +169,32 @@ RUN apk add --no-cache \
     curl jq su-exec
 
 # Workspace root config
-COPY --from=twenty-server-build /app/package.json /app/yarn.lock /app/.yarnrc.yml /app/
-COPY --from=twenty-server-build /app/tsconfig.base.json /app/nx.json /app/
-COPY --from=twenty-server-build /app/.yarn /app/.yarn
-COPY --from=twenty-server-build /app/node_modules /app/node_modules
+COPY --from=pm-server-build /app/package.json /app/yarn.lock /app/.yarnrc.yml /app/
+COPY --from=pm-server-build /app/tsconfig.base.json /app/nx.json /app/
+COPY --from=pm-server-build /app/.yarn /app/.yarn
+COPY --from=pm-server-build /app/node_modules /app/node_modules
 
 # Server package (compiled dist + package.json only, no src/)
-COPY --from=twenty-server-build /app/packages/twenty-server/package.json /app/packages/twenty-server/
-COPY --from=twenty-server-build /app/packages/twenty-server/dist /app/packages/twenty-server/dist
-COPY --from=twenty-server-build /app/packages/twenty-server/patches /app/packages/twenty-server/patches
+COPY --from=pm-server-build /app/packages/pm-server/package.json /app/packages/pm-server/
+COPY --from=pm-server-build /app/packages/pm-server/dist /app/packages/pm-server/dist
+COPY --from=pm-server-build /app/packages/pm-server/patches /app/packages/pm-server/patches
 
 # Workspace packages (dist + package.json; node_modules symlinks resolve to these)
-COPY --from=twenty-server-build /app/packages/twenty-shared/package.json /app/packages/twenty-shared/
-COPY --from=twenty-server-build /app/packages/twenty-shared/dist /app/packages/twenty-shared/dist
-COPY --from=twenty-server-build /app/packages/twenty-emails/package.json /app/packages/twenty-emails/
-COPY --from=twenty-server-build /app/packages/twenty-emails/dist /app/packages/twenty-emails/dist
-COPY --from=twenty-server-build /app/packages/twenty-sdk/package.json /app/packages/twenty-sdk/
-COPY --from=twenty-server-build /app/packages/twenty-client-sdk/package.json /app/packages/twenty-client-sdk/
-COPY --from=twenty-server-build /app/packages/twenty-client-sdk/dist /app/packages/twenty-client-sdk/dist
-COPY --from=twenty-server-build /app/packages/twenty-ui/package.json /app/packages/twenty-ui/
-COPY --from=twenty-server-build /app/packages/twenty-front/package.json /app/packages/twenty-front/
+COPY --from=pm-server-build /app/packages/pm-shared/package.json /app/packages/pm-shared/
+COPY --from=pm-server-build /app/packages/pm-shared/dist /app/packages/pm-shared/dist
+COPY --from=pm-server-build /app/packages/pm-emails/package.json /app/packages/pm-emails/
+COPY --from=pm-server-build /app/packages/pm-emails/dist /app/packages/pm-emails/dist
+COPY --from=pm-server-build /app/packages/twenty-sdk/package.json /app/packages/twenty-sdk/
+COPY --from=pm-server-build /app/packages/twenty-client-sdk/package.json /app/packages/twenty-client-sdk/
+COPY --from=pm-server-build /app/packages/twenty-client-sdk/dist /app/packages/twenty-client-sdk/dist
+COPY --from=pm-server-build /app/packages/pm-ui/package.json /app/packages/pm-ui/
+COPY --from=pm-server-build /app/packages/pm-front/package.json /app/packages/pm-front/
 
 # Frontend static build
-COPY --from=twenty-front-build /app/packages/twenty-front/build /app/packages/twenty-server/dist/front
+COPY --from=pm-front-build /app/packages/pm-front/build /app/packages/pm-server/dist/front
 
 # Source maps are not needed in the dev image (no Sentry)
-RUN find /app/packages/twenty-server/dist -name '*.js.map' -delete
+RUN find /app/packages/pm-server/dist -name '*.js.map' -delete
 
 # s6 service definitions
 COPY packages/twenty-docker/twenty-app-dev/rootfs/ /

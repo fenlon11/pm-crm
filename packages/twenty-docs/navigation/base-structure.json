@@ -418,52 +418,52 @@
                       "key": "twentyUi",
                       "label": "Twenty UI",
                       "pages": [
-                        "twenty-ui/introduction",
+                        "pm-ui/introduction",
                         {
                           "key": "display",
                           "label": "Display",
                           "pages": [
-                            "twenty-ui/display/checkmark",
-                            "twenty-ui/display/chip",
-                            "twenty-ui/display/icons",
-                            "twenty-ui/display/soon-pill",
-                            "twenty-ui/display/tag",
-                            "twenty-ui/display/app-tooltip"
+                            "pm-ui/display/checkmark",
+                            "pm-ui/display/chip",
+                            "pm-ui/display/icons",
+                            "pm-ui/display/soon-pill",
+                            "pm-ui/display/tag",
+                            "pm-ui/display/app-tooltip"
                           ]
                         },
                         {
                           "key": "feedback",
                           "label": "Feedback",
                           "pages": [
-                            "twenty-ui/progress-bar"
+                            "pm-ui/progress-bar"
                           ]
                         },
                         {
                           "key": "input",
                           "label": "Input",
                           "pages": [
-                            "twenty-ui/input/buttons",
-                            "twenty-ui/input/color-scheme",
-                            "twenty-ui/input/text",
-                            "twenty-ui/input/checkbox",
-                            "twenty-ui/input/icon-picker",
-                            "twenty-ui/input/image-input",
-                            "twenty-ui/input/radio",
-                            "twenty-ui/input/select",
-                            "twenty-ui/input/toggle",
-                            "twenty-ui/input/block-editor"
+                            "pm-ui/input/buttons",
+                            "pm-ui/input/color-scheme",
+                            "pm-ui/input/text",
+                            "pm-ui/input/checkbox",
+                            "pm-ui/input/icon-picker",
+                            "pm-ui/input/image-input",
+                            "pm-ui/input/radio",
+                            "pm-ui/input/select",
+                            "pm-ui/input/toggle",
+                            "pm-ui/input/block-editor"
                           ]
                         },
                         {
                           "key": "navigation",
                           "label": "Navigation",
                           "pages": [
-                            "twenty-ui/navigation",
-                            "twenty-ui/navigation/breadcrumb",
-                            "twenty-ui/navigation/links",
-                            "twenty-ui/navigation/menu-item",
-                            "twenty-ui/navigation/navigation-bar",
-                            "twenty-ui/navigation/step-bar"
+                            "pm-ui/navigation",
+                            "pm-ui/navigation/breadcrumb",
+                            "pm-ui/navigation/links",
+                            "pm-ui/navigation/menu-item",
+                            "pm-ui/navigation/navigation-bar",
+                            "pm-ui/navigation/step-bar"
                           ]
                         }
                       ]

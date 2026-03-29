@@ -14,7 +14,7 @@ description: Define types, entities, and central constant registrations for sync
 ## Quick Start
 
 This step creates:
-1. Metadata name constant (twenty-shared)
+1. Metadata name constant (pm-shared)
 2. TypeORM entity (extends `SyncableEntity`)
 3. Flat entity types
 4. Action types (universal + flat)
@@ -24,7 +24,7 @@ This step creates:
 
 ## Step 1: Add Metadata Name
 
-**File**: `packages/twenty-shared/src/metadata/all-metadata-name.constant.ts`
+**File**: `packages/pm-shared/src/metadata/all-metadata-name.constant.ts`
 
 ```typescript
 export const ALL_METADATA_NAME = {

@@ -2,9 +2,9 @@ import chalk from 'chalk';
 import inquirer from 'inquirer';
 import { writeFile } from 'node:fs/promises';
 import { join, relative } from 'path';
-import { SyncableEntity } from 'twenty-shared/application';
-import { FieldMetadataType } from 'twenty-shared/types';
-import { assertUnreachable } from 'twenty-shared/utils';
+import { SyncableEntity } from 'pm-shared/application';
+import { FieldMetadataType } from 'pm-shared/types';
+import { assertUnreachable } from 'pm-shared/utils';
 import { v4 } from 'uuid';
 
 import { CURRENT_EXECUTION_DIRECTORY } from '@/cli/utilities/config/current-execution-directory';

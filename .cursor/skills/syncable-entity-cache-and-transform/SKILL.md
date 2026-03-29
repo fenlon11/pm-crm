@@ -110,7 +110,7 @@ export const fromMyEntityEntityToFlatMyEntity = (
 
 ```typescript
 import { v4 } from 'uuid';
-import { sanitizeString } from 'twenty-shared/string';
+import { sanitizeString } from 'pm-shared/string';
 import { type CreateMyEntityInput } from 'src/engine/metadata-modules/my-entity/dtos/create-my-entity.input';
 import { type UniversalFlatMyEntity } from 'src/engine/workspace-manager/workspace-migration/universal-flat-entity/types/universal-flat-my-entity.type';
 import { resolveEntityRelationUniversalIdentifiers } from 'src/engine/metadata-modules/flat-entity/utils/resolve-entity-relation-universal-identifiers.util';

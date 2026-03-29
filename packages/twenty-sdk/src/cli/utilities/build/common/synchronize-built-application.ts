@@ -5,7 +5,7 @@ import { manifestUpdateChecksums } from '@/cli/utilities/build/manifest/manifest
 import { writeManifestToOutput } from '@/cli/utilities/build/manifest/manifest-writer';
 import { serializeError } from '@/cli/utilities/error/serialize-error';
 import { FileUploader } from '@/cli/utilities/file/file-uploader';
-import { type Manifest } from 'twenty-shared/application';
+import { type Manifest } from 'pm-shared/application';
 
 export type AppSyncOptions = {
   appPath: string;

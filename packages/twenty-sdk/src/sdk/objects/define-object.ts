@@ -2,7 +2,7 @@ import { type DefineEntity } from '@/sdk/common/types/define-entity.type';
 import { createValidationResult } from '@/sdk/common/utils/create-validation-result';
 import { validateFields } from '@/sdk/fields/validate-fields';
 import { type ObjectConfig } from '@/sdk/objects/object-config';
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 
 export const defineObject: DefineEntity<ObjectConfig> = (config) => {
   const errors = [];

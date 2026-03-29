@@ -31,28 +31,28 @@ for lang_dir in "$DOCS_DIR"/*/ ; do
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
     "s|href=\"/developers/|href=\"/l/$lang_code/developers/|g" {} \;
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
-    "s|href=\"/twenty-ui/|href=\"/l/$lang_code/twenty-ui/|g" {} \;
+    "s|href=\"/pm-ui/|href=\"/l/$lang_code/pm-ui/|g" {} \;
 
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
     "s|](/user-guide/|](/l/$lang_code/user-guide/|g" {} \;
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
     "s|](/developers/|](/l/$lang_code/developers/|g" {} \;
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
-    "s|](/twenty-ui/|](/l/$lang_code/twenty-ui/|g" {} \;
+    "s|](/pm-ui/|](/l/$lang_code/pm-ui/|g" {} \;
 
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
     "s|https://docs\.twenty\.com/user-guide/|https://docs.twenty.com/l/$lang_code/user-guide/|g" {} \;
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
     "s|https://docs\.twenty\.com/developers/|https://docs.twenty.com/l/$lang_code/developers/|g" {} \;
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
-    "s|https://docs\.twenty\.com/twenty-ui/|https://docs.twenty.com/l/$lang_code/twenty-ui/|g" {} \;
+    "s|https://docs\.twenty\.com/pm-ui/|https://docs.twenty.com/l/$lang_code/pm-ui/|g" {} \;
 
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
     "s|https://docs\.twenty\.com/user-guide/|https://docs.twenty.com/$lang_code/user-guide/|g" {} \;
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
     "s|https://docs\.twenty\.com/developers/|https://docs.twenty.com/$lang_code/developers/|g" {} \;
   find "$lang_dir" -name "*.mdx" -type f -exec sed -i.bak \
-    "s|https://docs\.twenty\.com/twenty-ui/|https://docs.twenty.com/$lang_code/twenty-ui/|g" {} \;
+    "s|https://docs\.twenty\.com/pm-ui/|https://docs.twenty.com/$lang_code/pm-ui/|g" {} \;
 
   find "$lang_dir" -name "*.bak" -type f -delete
 

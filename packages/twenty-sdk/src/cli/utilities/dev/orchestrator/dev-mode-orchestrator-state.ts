@@ -4,8 +4,8 @@ import { type CheckServerOrchestratorStepOutput } from '@/cli/utilities/dev/orch
 import { type StartWatchersOrchestratorStepOutput } from '@/cli/utilities/dev/orchestrator/steps/start-watchers-orchestrator-step';
 import { type SyncApplicationOrchestratorStepOutput } from '@/cli/utilities/dev/orchestrator/steps/sync-application-orchestrator-step';
 import { type UploadFilesOrchestratorStepOutput } from '@/cli/utilities/dev/orchestrator/steps/upload-files-orchestrator-step';
-import { type Manifest, SyncableEntity } from 'twenty-shared/application';
-import { type FileFolder } from 'twenty-shared/types';
+import { type Manifest, SyncableEntity } from 'pm-shared/application';
+import { type FileFolder } from 'pm-shared/types';
 
 export type OrchestratorStateStepEvent = {
   message: string;

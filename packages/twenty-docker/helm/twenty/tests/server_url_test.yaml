@@ -29,7 +29,7 @@ tests:
     asserts:
       - matchRegex:
           path: spec.template.spec.containers[0].env[?(@.name=="SERVER_URL")].value
-          pattern: ^http://my-twenty-twenty-server\.default\.svc\.cluster\.local:3000$
+          pattern: ^http://my-twenty-pm-server\.default\.svc\.cluster\.local:3000$
 ---
 suite: ingress configuration
 templates:

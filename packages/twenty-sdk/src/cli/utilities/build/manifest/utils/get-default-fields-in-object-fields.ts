@@ -4,7 +4,7 @@ import { getDefaultRelationObjectFields } from '@/cli/utilities/build/manifest/u
 import {
   type FieldManifest,
   type ObjectFieldManifest,
-} from 'twenty-shared/application';
+} from 'pm-shared/application';
 
 export const getDefaultFieldsInObjectFields = (
   objectConfig: ObjectConfig,

@@ -13,7 +13,7 @@ import {
   serverStart,
   type ServerStartResult,
 } from 'twenty-sdk/cli';
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 
 import {
   type ExampleOptions,

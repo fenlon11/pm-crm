@@ -76,7 +76,7 @@ jobs:
 
           echo "Waiting for services to be ready..."
           count=0
-          while [ ! $(docker inspect --format='{{.State.Health.Status}}' twenty-db-1) = "healthy" ] || [ ! $(docker inspect --format='{{.State.Health.Status}}' twenty-server-1) = "healthy" ]; do
+          while [ ! $(docker inspect --format='{{.State.Health.Status}}' twenty-db-1) = "healthy" ] || [ ! $(docker inspect --format='{{.State.Health.Status}}' pm-server-1) = "healthy" ]; do
               sleep 5
               count=$((count+1))
               if [ $count -gt 60 ]; then

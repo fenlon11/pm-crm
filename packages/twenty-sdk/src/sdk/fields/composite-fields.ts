@@ -7,4 +7,4 @@ export type {
   LinksMetadata as LinksField,
   PhonesMetadata as PhonesField,
   RichTextMetadata as RichTextField,
-} from 'twenty-shared/types';
+} from 'pm-shared/types';

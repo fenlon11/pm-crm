@@ -1,6 +1,6 @@
 import { type ApiResponse } from '@/cli/utilities/api/api-response-type';
 import axios, { type AxiosInstance, type AxiosResponse } from 'axios';
-import { type Manifest } from 'twenty-shared/application';
+import { type Manifest } from 'pm-shared/application';
 
 export class ApplicationApi {
   constructor(private readonly client: AxiosInstance) {}

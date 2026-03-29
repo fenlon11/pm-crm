@@ -1,6 +1,6 @@
-import { type FieldManifest, type Manifest } from 'twenty-shared/application';
-import { FieldMetadataType, RelationType } from 'twenty-shared/types';
-import { isNonEmptyArray } from 'twenty-shared/utils';
+import { type FieldManifest, type Manifest } from 'pm-shared/application';
+import { FieldMetadataType, RelationType } from 'pm-shared/types';
+import { isNonEmptyArray } from 'pm-shared/utils';
 
 const RELATION_FIELD_TYPES: string[] = [
   FieldMetadataType.RELATION,

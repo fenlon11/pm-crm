@@ -1,8 +1,8 @@
-export * from 'twenty-ui';
-export * from 'twenty-ui/accessibility';
-export * from 'twenty-ui/components';
+export * from 'pm-ui';
+export * from 'pm-ui/accessibility';
+export * from 'pm-ui/components';
 
-// Selective re-export from twenty-ui/display:
+// Selective re-export from pm-ui/display:
 // IconsProvider, useIcons, and iconsState are excluded to avoid bundling
 // the AllIcons module (~5000 Tabler icons) which adds ~4MB to the SDK dist.
 export {
@@ -489,7 +489,7 @@ export {
   ThinkingOrbitLoaderIcon,
   TooltipDelay,
   TooltipPosition,
-} from 'twenty-ui/display';
+} from 'pm-ui/display';
 export type {
   AnimatedCheckmarkProps,
   AppTooltipProps,
@@ -511,12 +511,12 @@ export type {
   LabelVariant,
   SidePanelInformationBannerProps,
   TablerIconsProps,
-} from 'twenty-ui/display';
+} from 'pm-ui/display';
 
-export * from 'twenty-ui/feedback';
-export * from 'twenty-ui/input';
-export * from 'twenty-ui/json-visualizer';
-export * from 'twenty-ui/layout';
-export * from 'twenty-ui/navigation';
-export * from 'twenty-ui/theme-constants';
-export * from 'twenty-ui/utilities';
+export * from 'pm-ui/feedback';
+export * from 'pm-ui/input';
+export * from 'pm-ui/json-visualizer';
+export * from 'pm-ui/layout';
+export * from 'pm-ui/navigation';
+export * from 'pm-ui/theme-constants';
+export * from 'pm-ui/utilities';

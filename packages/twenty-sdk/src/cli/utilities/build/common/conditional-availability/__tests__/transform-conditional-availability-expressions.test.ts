@@ -5,8 +5,8 @@ import { transformConditionalAvailabilityExpressionsForEsBuildPlugin } from '@/c
 import {
   CommandMenuContextApiPageType,
   type CommandMenuContextApi,
-} from 'twenty-shared/types';
-import { evaluateConditionalAvailabilityExpression } from 'twenty-shared/utils';
+} from 'pm-shared/types';
+import { evaluateConditionalAvailabilityExpression } from 'pm-shared/utils';
 
 const MOCKS_DIR = path.join(__dirname, '__mocks__');
 

@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { OUTPUT_DIR } from 'twenty-shared/application';
+import { OUTPUT_DIR } from 'pm-shared/application';
 
 import { AppDevCommand } from '@/cli/commands/dev';
 import { pathExists } from '@/cli/utilities/file/fs-utils';

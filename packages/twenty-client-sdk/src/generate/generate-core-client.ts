@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 import { generate } from '@genql/cli';
 import { build } from 'esbuild';
-import { DEFAULT_API_URL_NAME } from 'twenty-shared/application';
+import { DEFAULT_API_URL_NAME } from 'pm-shared/application';
 
 import { buildClientWrapperSource } from './client-wrapper';
 import { emptyDir, ensureDir, move, remove } from './fs-utils';

@@ -1,6 +1,6 @@
 import { relative } from 'path';
-import { type Manifest, OUTPUT_DIR } from 'twenty-shared/application';
-import { FileFolder } from 'twenty-shared/types';
+import { type Manifest, OUTPUT_DIR } from 'pm-shared/application';
+import { FileFolder } from 'pm-shared/types';
 
 import type { EntityFilePaths } from '@/cli/utilities/build/manifest/manifest-extract-config';
 

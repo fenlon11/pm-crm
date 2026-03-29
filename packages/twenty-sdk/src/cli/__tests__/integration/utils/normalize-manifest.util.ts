@@ -1,4 +1,4 @@
-import { type Manifest } from 'twenty-shared/application';
+import { type Manifest } from 'pm-shared/application';
 
 const sortById = <T extends { universalIdentifier: string }>(items: T[]): T[] =>
   [...items].sort((a, b) =>

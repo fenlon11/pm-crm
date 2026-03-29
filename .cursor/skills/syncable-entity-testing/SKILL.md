@@ -128,8 +128,8 @@ import { deleteMyEntity } from 'test/integration/metadata/suites/my-entity/utils
 import {
   eachTestingContextFilter,
   type EachTestingContext,
-} from 'twenty-shared/testing';
-import { isDefined } from 'twenty-shared/utils';
+} from 'pm-shared/testing';
+import { isDefined } from 'pm-shared/utils';
 import { type CreateMyEntityInput } from 'src/engine/metadata-modules/my-entity/dtos/create-my-entity.input';
 
 type TestContext = {
@@ -426,13 +426,13 @@ expectOneNotInternalServerErrorSnapshot({
 
 ```bash
 # Run all entity tests
-npx jest test/integration/metadata/suites/my-entity --config=packages/twenty-server/jest.config.mjs
+npx jest test/integration/metadata/suites/my-entity --config=packages/pm-server/jest.config.mjs
 
 # Run specific test file
-npx jest test/integration/metadata/suites/my-entity/failing-my-entity-creation.integration-spec.ts --config=packages/twenty-server/jest.config.mjs
+npx jest test/integration/metadata/suites/my-entity/failing-my-entity-creation.integration-spec.ts --config=packages/pm-server/jest.config.mjs
 
 # Update snapshots
-npx jest test/integration/metadata/suites/my-entity --updateSnapshot --config=packages/twenty-server/jest.config.mjs
+npx jest test/integration/metadata/suites/my-entity --updateSnapshot --config=packages/pm-server/jest.config.mjs
 ```
 
 ---

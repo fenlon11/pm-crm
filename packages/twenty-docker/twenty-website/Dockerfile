@@ -9,8 +9,8 @@ COPY ./.yarnrc.yml .
 COPY ./.yarn/releases /app/.yarn/releases
 COPY ./.yarn/patches /app/.yarn/patches
 COPY ./packages/twenty-oxlint-rules /app/packages/twenty-oxlint-rules
-COPY ./packages/twenty-ui/package.json /app/packages/twenty-ui/
-COPY ./packages/twenty-shared/package.json /app/packages/twenty-shared/
+COPY ./packages/pm-ui/package.json /app/packages/pm-ui/
+COPY ./packages/pm-shared/package.json /app/packages/pm-shared/
 COPY ./packages/twenty-website/package.json /app/packages/twenty-website/package.json
 
 RUN yarn
@@ -20,7 +20,7 @@ ENV KEYSTATIC_GITHUB_CLIENT_SECRET="<fake build value>"
 ENV KEYSTATIC_SECRET="<fake build value>"
 ENV NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG="<fake build value>"
 
-COPY ./packages/twenty-ui /app/packages/twenty-ui
+COPY ./packages/pm-ui /app/packages/pm-ui
 COPY ./packages/twenty-website /app/packages/twenty-website
 RUN npx nx build twenty-website
 

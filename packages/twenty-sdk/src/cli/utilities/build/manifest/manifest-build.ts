@@ -34,9 +34,9 @@ import {
   type RoleManifest,
   type SkillManifest,
   type ViewManifest,
-} from 'twenty-shared/application';
-import { getInputSchemaFromSourceCode } from 'twenty-shared/logic-function';
-import { assertUnreachable } from 'twenty-shared/utils';
+} from 'pm-shared/application';
+import { getInputSchemaFromSourceCode } from 'pm-shared/logic-function';
+import { assertUnreachable } from 'pm-shared/utils';
 
 const loadSources = async (appPath: string): Promise<string[]> => {
   return await glob(['**/*.ts', '**/*.tsx'], {

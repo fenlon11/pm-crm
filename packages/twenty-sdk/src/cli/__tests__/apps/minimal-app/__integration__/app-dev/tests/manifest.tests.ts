@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { type Manifest } from 'twenty-shared/application';
+import { type Manifest } from 'pm-shared/application';
 
 import { EXPECTED_MANIFEST } from '@/cli/__tests__/apps/minimal-app/__integration__/app-dev/expected-manifest';
 import { normalizeManifestForComparison } from '@/cli/__tests__/integration/utils/normalize-manifest.util';

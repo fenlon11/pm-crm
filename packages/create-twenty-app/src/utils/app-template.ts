@@ -1,6 +1,6 @@
 import * as fs from 'fs-extra';
 import { join } from 'path';
-import { ASSETS_DIR } from 'twenty-shared/application';
+import { ASSETS_DIR } from 'pm-shared/application';
 import { v4 } from 'uuid';
 
 import { type ExampleOptions } from '@/types/scaffolding-options';

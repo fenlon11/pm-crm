@@ -7,8 +7,8 @@ import gfm from 'remark-gfm';
 import { type ReleaseNote } from '@/app/(public)/releases/api/route';
 import { compareSemanticVersions } from '@/shared-utils/compareSemanticVersions';
 
-// WARNING: This API is used by twenty-front, not just by twenty-website
-// Make sure you don't change it without updating twenty-front at the same time
+// WARNING: This API is used by pm-front, not just by twenty-website
+// Make sure you don't change it without updating pm-front at the same time
 export async function getReleases(baseUrl?: string): Promise<ReleaseNote[]> {
   const files = fs.readdirSync('src/content/releases');
   const releasenotes: ReleaseNote[] = [];

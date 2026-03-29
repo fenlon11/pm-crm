@@ -1,7 +1,7 @@
 import type { ObjectConfig } from '@/sdk/objects/object-config';
-import { FieldMetadataType } from 'twenty-shared/types';
+import { FieldMetadataType } from 'pm-shared/types';
 import { generateDefaultFieldUniversalIdentifier } from '@/cli/utilities/build/manifest/utils/generate-default-field-universal-identifier';
-import { type ObjectFieldManifest } from 'twenty-shared/application';
+import { type ObjectFieldManifest } from 'pm-shared/application';
 
 export const getDefaultObjectFields = (
   objectConfig: ObjectConfig,

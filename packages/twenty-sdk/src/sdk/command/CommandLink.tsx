@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
 import { type NavigateOptions } from 'react-router-dom';
-import { type AppPath } from 'twenty-shared/types';
-import { type getAppPath } from 'twenty-shared/utils';
+import { type AppPath } from 'pm-shared/types';
+import { type getAppPath } from 'pm-shared/utils';
 import {
   navigate,
   unmountFrontComponent,

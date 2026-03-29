@@ -8,8 +8,8 @@ on:
     types: [opened, synchronize, reopened, labeled]
     paths:
       - packages/twenty-docker/**
-      - packages/twenty-server/**
-      - packages/twenty-front/**
+      - packages/pm-server/**
+      - packages/pm-front/**
       - .github/workflows/preview-env-dispatch.yaml
       - .github/workflows/preview-env-keepalive.yaml
 

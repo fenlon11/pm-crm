@@ -1,4 +1,4 @@
-import { type FieldMetadataType } from 'twenty-shared/types';
+import { type FieldMetadataType } from 'pm-shared/types';
 
 export type InputData = { [x: string]: any };
 

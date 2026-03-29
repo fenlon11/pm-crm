@@ -11,8 +11,8 @@ import {
 import { createTypecheckPlugin } from '@/cli/utilities/build/common/typecheck-plugin';
 import * as esbuild from 'esbuild';
 import path from 'path';
-import { NODE_ESM_CJS_BANNER, OUTPUT_DIR } from 'twenty-shared/application';
-import { FileFolder } from 'twenty-shared/types';
+import { NODE_ESM_CJS_BANNER, OUTPUT_DIR } from 'pm-shared/application';
+import { FileFolder } from 'pm-shared/types';
 
 export const LOGIC_FUNCTION_EXTERNAL_MODULES: string[] = [
   'twenty-client-sdk/core',

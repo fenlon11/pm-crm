@@ -3,7 +3,7 @@ import {
   SENT_AT_FIELD_UNIVERSAL_IDENTIFIER,
 } from '../objects/post-card-recipient.object';
 import { defineView } from 'twenty-sdk';
-import { ViewType } from 'twenty-shared/types';
+import { ViewType } from 'pm-shared/types';
 
 export const ALL_POST_CARD_RECIPIENTS_VIEW_ID =
   'b1a2b3c4-0003-4a7b-8c9d-0e1f2a3b4c5d';

@@ -34,7 +34,7 @@ const TwentyUiComponent = () => {
 
   return (
     <ThemeProvider colorScheme="light">
-      <div data-testid="twenty-ui-component" style={CARD_STYLE}>
+      <div data-testid="pm-ui-component" style={CARD_STYLE}>
         <H2Title
           title="Twenty UI"
           description="The CRM's own component library with theme-aware styling."
@@ -54,7 +54,7 @@ const TwentyUiComponent = () => {
           <Chip label="Rounded" variant={ChipVariant.Rounded} />
         </div>
         <p
-          data-testid="twenty-ui-count"
+          data-testid="pm-ui-count"
           style={{ fontSize: 24, fontWeight: 800, margin: 0 }}
         >
           Count: {count}
@@ -78,7 +78,7 @@ const TwentyUiComponent = () => {
 
 export default defineFrontComponent({
   universalIdentifier: 'test-20ui0-0000-0000-0000-000000000010',
-  name: 'twenty-ui-component',
+  name: 'pm-ui-component',
   description: 'A front component using Twenty UI remote components',
   component: TwentyUiComponent,
 });

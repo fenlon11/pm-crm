@@ -1,7 +1,7 @@
 import { buildManifest } from '@/cli/utilities/build/manifest/manifest-build';
 import { ensureDir, pathExists, readJson } from '@/cli/utilities/file/fs-utils';
 import path from 'path';
-import { type Manifest, OUTPUT_DIR } from 'twenty-shared/application';
+import { type Manifest, OUTPUT_DIR } from 'pm-shared/application';
 
 export const readManifestFromFile = async (
   appPath: string,

@@ -21,8 +21,8 @@
   },
   "devDependencies": {
     "jest": "29.7.0",
+    "pm-shared": "workspace:*",
     "rimraf": "^3.0.2",
-    "twenty-shared": "workspace:*",
     "vite": "^7.0.0",
     "vite-plugin-dts": "^4.5.4",
     "vite-tsconfig-paths": "^4.2.1",

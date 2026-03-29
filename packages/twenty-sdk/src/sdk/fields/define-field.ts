@@ -1,4 +1,4 @@
-import { type FieldManifest } from 'twenty-shared/application';
+import { type FieldManifest } from 'pm-shared/application';
 import { validateFields } from '@/sdk/fields/validate-fields';
 
 import { type DefineEntity } from '@/sdk/common/types/define-entity.type';

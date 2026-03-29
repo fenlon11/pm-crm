@@ -3,7 +3,7 @@ import type * as esbuild from 'esbuild';
 import { readFile } from 'node:fs/promises';
 import path from 'path';
 import { type OnFileBuiltCallback } from '@/cli/utilities/build/common/restartable-watcher-interface';
-import { type FileFolder } from 'twenty-shared/types';
+import { type FileFolder } from 'pm-shared/types';
 
 const SDK_CLIENT_IMPORT_PREFIX = 'twenty-client-sdk';
 

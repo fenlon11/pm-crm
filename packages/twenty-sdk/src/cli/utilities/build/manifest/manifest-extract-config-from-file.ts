@@ -6,7 +6,7 @@ import { createRequire } from 'module';
 import { mkdtemp, writeFile } from 'node:fs/promises';
 import os from 'os';
 import path from 'path';
-import { isDefined, isPlainObject } from 'twenty-shared/utils';
+import { isDefined, isPlainObject } from 'pm-shared/utils';
 
 const MANIFEST_MOCK_MODULES = [
   'twenty-sdk/ui',

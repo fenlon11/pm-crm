@@ -1,6 +1,6 @@
 import { readdir } from 'node:fs/promises';
 import { join } from 'path';
-import { OUTPUT_DIR } from 'twenty-shared/application';
+import { OUTPUT_DIR } from 'pm-shared/application';
 
 export const defineEntitiesTests = (appPath: string): void => {
   const outputDir = join(appPath, OUTPUT_DIR);

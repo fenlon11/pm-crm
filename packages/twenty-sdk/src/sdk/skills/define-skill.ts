@@ -1,6 +1,6 @@
 import { type DefineEntity } from '@/sdk/common/types/define-entity.type';
 import { createValidationResult } from '@/sdk/common/utils/create-validation-result';
-import { type SkillManifest } from 'twenty-shared/application';
+import { type SkillManifest } from 'pm-shared/application';
 
 export const defineSkill: DefineEntity<SkillManifest> = (config) => {
   const errors: string[] = [];

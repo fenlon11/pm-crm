@@ -4,7 +4,7 @@ import * as fs from 'fs-extra';
 import { tmpdir } from 'os';
 import createTwentyAppPackageJson from 'package.json';
 import { join } from 'path';
-import { GENERATED_DIR } from 'twenty-shared/application';
+import { GENERATED_DIR } from 'pm-shared/application';
 
 jest.mock('fs-extra', () => {
   const actual = jest.requireActual('fs-extra');

@@ -8,7 +8,7 @@ import {
   type OrchestratorStateSyncStatus,
 } from '@/cli/utilities/dev/orchestrator/dev-mode-orchestrator-state';
 import { serializeError } from '@/cli/utilities/error/serialize-error';
-import { type Manifest } from 'twenty-shared/application';
+import { type Manifest } from 'pm-shared/application';
 
 export type SyncApplicationOrchestratorStepOutput = {
   syncStatus: OrchestratorStateSyncStatus;

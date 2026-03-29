@@ -2,8 +2,8 @@ import { type ApiResponse } from '@/cli/utilities/api/api-response-type';
 import axios, { type AxiosInstance, type AxiosResponse } from 'axios';
 import * as fs from 'fs';
 import * as path from 'path';
-import { type FileFolder } from 'twenty-shared/types';
-import { pascalCase } from 'twenty-shared/utils';
+import { type FileFolder } from 'pm-shared/types';
+import { pascalCase } from 'pm-shared/utils';
 
 const MIME_TYPES: Record<string, string> = {
   '.jpg': 'image/jpeg',

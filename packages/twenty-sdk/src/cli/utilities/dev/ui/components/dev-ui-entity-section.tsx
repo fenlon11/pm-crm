@@ -12,7 +12,7 @@ import {
 import { useStatusIcon } from '@/cli/utilities/dev/ui/dev-ui-hooks';
 import { useInk } from '@/cli/utilities/dev/ui/dev-ui-ink-context';
 import React from 'react';
-import { type SyncableEntity } from 'twenty-shared/application';
+import { type SyncableEntity } from 'pm-shared/application';
 
 export const DevUiStatusIcon = ({
   uiStatus,

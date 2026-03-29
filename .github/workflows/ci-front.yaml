@@ -24,9 +24,9 @@ jobs:
       files: |
         package.json
         yarn.lock
-        packages/twenty-front/**
-        packages/twenty-ui/**
-        packages/twenty-shared/**
+        packages/pm-front/**
+        packages/pm-ui/**
+        packages/pm-shared/**
         packages/twenty-sdk/**
         !packages/twenty-sdk/package.json
   front-sb-build:
@@ -50,14 +50,14 @@ jobs:
       - name: Diagnostic disk space issue
         run: df -h
       - name: Front / Write .env
-        run: npx nx reset:env twenty-front
+        run: npx nx reset:env pm-front
       - name: Front / Build storybook
-        run: npx nx storybook:build twenty-front
+        run: npx nx storybook:build pm-front
       - name: Upload storybook build
         uses: actions/upload-artifact@v4
         with:
           name: storybook-static
-          path: packages/twenty-front/storybook-static
+          path: packages/pm-front/storybook-static
           retention-days: 1
       - name: Save storybook build cache
         uses: ./.github/actions/save-cache
@@ -88,35 +88,35 @@ jobs:
         with:
           key: ${{ env.STORYBOOK_BUILD_CACHE_KEY_FOR_RESTORE_ACTION }}
       - name: Clean stale storybook vitest cache
-        run: rm -rf packages/twenty-front/node_modules/.cache/storybook
+        run: rm -rf packages/pm-front/node_modules/.cache/storybook
       - name: Build dependencies
         run: |
-          npx nx build twenty-shared
-          npx nx build twenty-ui
+          npx nx build pm-shared
+          npx nx build pm-ui
           npx nx build twenty-sdk
       - name: Download storybook build
         uses: actions/download-artifact@v4
         with:
           name: storybook-static
-          path: packages/twenty-front/storybook-static
+          path: packages/pm-front/storybook-static
       - name: Install Playwright
         run: |
-          cd packages/twenty-front
+          cd packages/pm-front
           npx playwright install
       - name: Front / Write .env
-        run: npx nx reset:env twenty-front
+        run: npx nx reset:env pm-front
       - name: Serve storybook & run tests
         run: |
-          npx http-server packages/twenty-front/storybook-static --port 6006 --silent &
+          npx http-server packages/pm-front/storybook-static --port 6006 --silent &
           timeout 30 bash -c 'until curl -sf http://localhost:6006 > /dev/null 2>&1; do sleep 1; done'
-          npx nx storybook:test twenty-front --configuration=${{ matrix.storybook_scope }} --shard=${{ matrix.shard }}/${{ env.SHARD_COUNTER }}
+          npx nx storybook:test pm-front --configuration=${{ matrix.storybook_scope }} --shard=${{ matrix.shard }}/${{ env.SHARD_COUNTER }}
       # - name: Rename coverage file
       #   run: |
-      #     if [ -f "packages/twenty-front/coverage/storybook/coverage-final.json" ]; then
-      #       mv packages/twenty-front/coverage/storybook/coverage-final.json packages/twenty-front/coverage/storybook/coverage-shard-${{matrix.shard}}.json
+      #     if [ -f "packages/pm-front/coverage/storybook/coverage-final.json" ]; then
+      #       mv packages/pm-front/coverage/storybook/coverage-final.json packages/pm-front/coverage/storybook/coverage-shard-${{matrix.shard}}.json
       #     else
       #       echo "Error: coverage-final.json not found"
-      #       ls -la packages/twenty-front/coverage/storybook/ || echo "Coverage directory does not exist"
+      #       ls -la packages/pm-front/coverage/storybook/ || echo "Coverage directory does not exist"
       #       exit 1
       #     fi
       # - name: Upload coverage artifact
@@ -124,13 +124,13 @@ jobs:
       #   with:
       #     retention-days: 1
       #     name: coverage-artifacts-${{ matrix.storybook_scope }}-${{ github.run_id }}-${{ matrix.shard }}
-      #     path: packages/twenty-front/coverage/storybook/coverage-shard-${{matrix.shard}}.json
+      #     path: packages/pm-front/coverage/storybook/coverage-shard-${{matrix.shard}}.json
   # merge-reports-and-check-coverage:
   #   timeout-minutes: 30
   #   runs-on: ubuntu-latest
   #   needs: front-sb-test
   #   env:
-  #     PATH_TO_COVERAGE: packages/twenty-front/coverage/storybook
+  #     PATH_TO_COVERAGE: packages/pm-front/coverage/storybook
   #   strategy:
   #     matrix:
   #       storybook_scope: [modules, pages, performance]
@@ -150,7 +150,7 @@ jobs:
   #         mkdir -p ${{ env.PATH_TO_COVERAGE }}
   #         npx nyc merge coverage-artifacts ${{ env.PATH_TO_COVERAGE }}/coverage-storybook.json
   #     - name: Checking coverage
-  #       run: npx nx storybook:coverage twenty-front --checkCoverage=true --configuration=${{ matrix.storybook_scope }}
+  #       run: npx nx storybook:coverage pm-front --checkCoverage=true --configuration=${{ matrix.storybook_scope }}
   front-task:
     needs: changed-files-check
     if: needs.changed-files-check.outputs.any_changed == 'true'
@@ -213,14 +213,14 @@ jobs:
       - name: Install dependencies
         uses: ./.github/actions/yarn-install
       - name: Front / Write .env
-        run: npx nx reset:env twenty-front
+        run: npx nx reset:env pm-front
       - name: Build frontend
-        run: npx nx build twenty-front
+        run: npx nx build pm-front
       # - name: Upload frontend build artifact
       #   uses: actions/upload-artifact@v4
       #   with:
       #     name: frontend-build
-      #     path: packages/twenty-front/build
+      #     path: packages/pm-front/build
       #     retention-days: 1
   ci-front-status-check:
     if: always() && !cancelled()

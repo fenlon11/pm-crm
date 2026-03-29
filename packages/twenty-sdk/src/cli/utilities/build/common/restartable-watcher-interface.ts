@@ -1,4 +1,4 @@
-import { type FileFolder } from 'twenty-shared/types';
+import { type FileFolder } from 'pm-shared/types';
 import { type Location } from 'esbuild';
 
 export interface RestartableWatcher {

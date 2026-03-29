@@ -73,10 +73,10 @@ jobs:
 
           echo "Waiting for server to start..."
           count=0
-          while [ ! $(docker inspect --format='{{.State.Health.Status}}' twenty-server-1) = "healthy" ]; do
+          while [ ! $(docker inspect --format='{{.State.Health.Status}}' pm-server-1) = "healthy" ]; do
               sleep 1;
               count=$((count+1));
-              if [ $(docker inspect --format='{{.State.Status}}' twenty-server-1) = "exited" ]; then
+              if [ $(docker inspect --format='{{.State.Status}}' pm-server-1) = "exited" ]; then
                   echo "Server exited"
                   docker compose logs server
                   exit 1
@@ -99,8 +99,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Create frontend placeholder
         run: |
-          mkdir -p packages/twenty-front/build
-          echo '<html><body>CI placeholder</body></html>' > packages/twenty-front/build/index.html
+          mkdir -p packages/pm-front/build
+          echo '<html><body>CI placeholder</body></html>' > packages/pm-front/build/index.html
       - name: Build app-dev image
         run: |
           docker build \

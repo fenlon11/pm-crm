@@ -1,7 +1,7 @@
 import { ApiService } from '@/cli/utilities/api/api-service';
 import { readManifestFromFile } from '@/cli/utilities/build/manifest/manifest-reader';
 import { ConfigService } from '@/cli/utilities/config/config-service';
-import { type Manifest } from 'twenty-shared/application';
+import { type Manifest } from 'pm-shared/application';
 import { runSafe } from '@/cli/utilities/run-safe';
 import {
   APP_ERROR_CODES,

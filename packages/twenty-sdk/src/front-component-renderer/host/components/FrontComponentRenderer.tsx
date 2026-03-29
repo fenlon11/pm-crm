@@ -11,9 +11,9 @@ import {
   RemoteRootRenderer,
 } from '@remote-dom/react/host';
 import { useMemo, useState } from 'react';
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 
-import { ThemeProvider } from 'twenty-ui/theme-constants';
+import { ThemeProvider } from 'pm-ui/theme-constants';
 import { FrontComponentWorkerEffect } from '../../remote/components/FrontComponentWorkerEffect';
 import { componentRegistry } from '../generated/host-component-registry';
 

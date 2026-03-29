@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { OUTPUT_DIR } from 'twenty-shared/application';
+import { OUTPUT_DIR } from 'pm-shared/application';
 
 import { runAppDevInProcess } from '@/cli/__tests__/integration/utils/run-app-dev-in-process.util';
 import { pathExists } from '@/cli/utilities/file/fs-utils';

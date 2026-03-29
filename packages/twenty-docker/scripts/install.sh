@@ -132,7 +132,7 @@ else
   # Tail logs of the server until it's ready
   docker compose logs -f server &
   pid=$!
-  while [ ! $(docker inspect --format='{{.State.Health.Status}}' twenty-server-1) = "healthy" ]; do
+  while [ ! $(docker inspect --format='{{.State.Health.Status}}' pm-server-1) = "healthy" ]; do
     sleep 1
   done
   kill $pid

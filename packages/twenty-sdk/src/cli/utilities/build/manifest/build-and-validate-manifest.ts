@@ -1,7 +1,7 @@
 import { type EntityFilePaths } from '@/cli/utilities/build/manifest/manifest-extract-config';
 import { buildManifest } from '@/cli/utilities/build/manifest/manifest-build';
 import { manifestValidate } from '@/cli/utilities/build/manifest/manifest-validate';
-import { type Manifest } from 'twenty-shared/application';
+import { type Manifest } from 'pm-shared/application';
 
 export type BuildAndValidateManifestSuccess = {
   success: true;

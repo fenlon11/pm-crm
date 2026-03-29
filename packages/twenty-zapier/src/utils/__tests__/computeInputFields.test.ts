@@ -1,4 +1,4 @@
-import { FieldMetadataType } from 'twenty-shared/types';
+import { FieldMetadataType } from 'pm-shared/types';
 import { computeInputFields } from 'src/utils/computeInputFields';
 import { type InputField } from 'src/utils/data.types';
 

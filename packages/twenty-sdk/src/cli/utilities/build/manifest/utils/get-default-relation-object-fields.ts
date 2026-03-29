@@ -4,10 +4,10 @@ import type { ObjectConfig } from '@/sdk/objects/object-config';
 import {
   type FieldManifest,
   type ObjectFieldManifest,
-} from 'twenty-shared/application';
-import { STANDARD_OBJECTS } from 'twenty-shared/metadata';
-import { FieldMetadataType, RelationOnDeleteAction } from 'twenty-shared/types';
-import { capitalize } from 'twenty-shared/utils';
+} from 'pm-shared/application';
+import { STANDARD_OBJECTS } from 'pm-shared/metadata';
+import { FieldMetadataType, RelationOnDeleteAction } from 'pm-shared/types';
+import { capitalize } from 'pm-shared/utils';
 
 type DefaultRelationConfig = {
   fieldName: string;

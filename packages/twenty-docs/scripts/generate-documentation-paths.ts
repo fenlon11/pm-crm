@@ -25,7 +25,7 @@ const baseStructurePath = path.resolve(
   '../navigation/base-structure.json',
 );
 
-const outputDir = path.resolve(__dirname, '../../twenty-shared/src/constants');
+const outputDir = path.resolve(__dirname, '../../pm-shared/src/constants');
 
 const baseStructure: BaseStructure = JSON.parse(
   fs.readFileSync(baseStructurePath, 'utf8'),

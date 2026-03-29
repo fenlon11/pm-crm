@@ -31,7 +31,7 @@ The documentation will be available at `http://localhost:3000`
 1. Edit MDX files in the appropriate directory:
    - `user-guide/` - User documentation
    - `developers/` - Developer documentation
-   - `twenty-ui/` - Component documentation
+   - `pm-ui/` - Component documentation
 
 2. Update `navigation/base-structure.json` if you need to change the tab/group hierarchy or add/remove pages. This file stays in the repo and is **not** uploaded to Crowdin.
 3. Keep the translation template (`navigation/navigation.template.json`) in sync by running `yarn docs:generate-navigation-template` after editing the base structure. This template is the only file that should be pushed to Crowdin.

@@ -52,7 +52,7 @@ export default defineConfig(() => {
         external: [
           ...Object.keys((packageJson as any).dependencies || {}),
           ...Object.keys((packageJson as any).devDependencies || {}).filter(
-            (dep: string) => dep !== 'twenty-shared',
+            (dep: string) => dep !== 'pm-shared',
           ),
           'node:fs/promises',
           'node:fs',

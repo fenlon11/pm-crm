@@ -1,6 +1,6 @@
 import type { Project, SourceFile } from 'ts-morph';
 
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 import { CUSTOM_ELEMENT_NAMES } from './constants';
 import { type ComponentSchema } from './schemas';
 

@@ -1,6 +1,6 @@
 import { type DefineEntity } from '@/sdk/common/types/define-entity.type';
 import { createValidationResult } from '@/sdk/common/utils/create-validation-result';
-import { type NavigationMenuItemManifest } from 'twenty-shared/application';
+import { type NavigationMenuItemManifest } from 'pm-shared/application';
 
 export const defineNavigationMenuItem: DefineEntity<
   NavigationMenuItemManifest

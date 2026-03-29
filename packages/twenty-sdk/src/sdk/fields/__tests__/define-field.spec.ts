@@ -1,6 +1,6 @@
 import { defineField } from '@/sdk';
-import { FieldMetadataType } from 'twenty-shared/types';
-import { type FieldManifest } from 'twenty-shared/application';
+import { FieldMetadataType } from 'pm-shared/types';
+import { type FieldManifest } from 'pm-shared/application';
 
 const validConfig: FieldManifest = {
   objectUniversalIdentifier: '45e8ae95-0ed8-4087-9f59-3ac85144f86d',

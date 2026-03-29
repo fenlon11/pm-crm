@@ -77,11 +77,11 @@
         "build",
         {
           "target": "database:reset",
-          "projects": "twenty-server"
+          "projects": "pm-server"
         },
         {
           "target": "start:ci-if-needed",
-          "projects": "twenty-server"
+          "projects": "pm-server"
         }
       ]
     },
@@ -103,8 +103,8 @@
       "inputs": [
         "{projectRoot}/scripts/remote-dom/**/*",
         "{projectRoot}/src/sdk/front-component-api/**/*",
-        "{workspaceRoot}/packages/twenty-ui/src/**/index.ts",
-        "{workspaceRoot}/packages/twenty-ui/src/**/*.tsx"
+        "{workspaceRoot}/packages/pm-ui/src/**/index.ts",
+        "{workspaceRoot}/packages/pm-ui/src/**/*.tsx"
       ],
       "outputs": [
         "{projectRoot}/src/front-component-renderer/host/generated/*",
@@ -128,11 +128,11 @@
         "build:sdk",
         {
           "target": "build:individual",
-          "projects": "twenty-ui"
+          "projects": "pm-ui"
         },
         {
           "target": "build:individual",
-          "projects": "twenty-shared"
+          "projects": "pm-shared"
         }
       ],
       "inputs": [

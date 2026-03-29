@@ -228,10 +228,10 @@ info "Setting up .env files..."
 cd "$REPO_ROOT"
 
 if command -v npx &>/dev/null && [ -d node_modules ]; then
-  npx nx reset:env twenty-front
-  npx nx reset:env twenty-server
+  npx nx reset:env pm-front
+  npx nx reset:env pm-server
 else
-  for pkg in twenty-front twenty-server; do
+  for pkg in pm-front pm-server; do
     src="packages/$pkg/.env.example"
     dst="packages/$pkg/.env"
     if [ -f "$src" ] && [ ! -f "$dst" ]; then
@@ -246,6 +246,6 @@ echo ""
 echo "Dev environment ready."
 echo ""
 echo "  yarn start                         # start everything"
-echo "  npx nx start twenty-front          # frontend  -> http://localhost:3001"
-echo "  npx nx start twenty-server         # backend   -> http://localhost:3000"
+echo "  npx nx start pm-front          # frontend  -> http://localhost:3001"
+echo "  npx nx start pm-server         # backend   -> http://localhost:3000"
 echo ""

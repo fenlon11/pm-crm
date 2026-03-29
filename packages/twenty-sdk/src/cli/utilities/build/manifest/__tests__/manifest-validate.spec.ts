@@ -2,8 +2,8 @@ import {
   type ApplicationManifest,
   type Manifest,
   type FieldManifest,
-} from 'twenty-shared/application';
-import { FieldMetadataType, RelationType } from 'twenty-shared/types';
+} from 'pm-shared/application';
+import { FieldMetadataType, RelationType } from 'pm-shared/types';
 import { manifestValidate } from '@/cli/utilities/build/manifest/manifest-validate';
 
 const validApplication: ApplicationManifest = {

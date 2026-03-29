@@ -1,10 +1,10 @@
 import { FieldType } from '@/sdk';
-import type { Manifest } from 'twenty-shared/application';
+import type { Manifest } from 'pm-shared/application';
 import {
   FieldMetadataType,
   RelationOnDeleteAction,
   RelationType,
-} from 'twenty-shared/types';
+} from 'pm-shared/types';
 
 export const EXPECTED_MANIFEST: Manifest = {
   application: {

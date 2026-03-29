@@ -15,7 +15,7 @@ import { UploadFilesOrchestratorStep } from '@/cli/utilities/dev/orchestrator/st
 import { serializeError } from '@/cli/utilities/error/serialize-error';
 import { emptyDir, ensureDir } from '@/cli/utilities/file/fs-utils';
 import path from 'path';
-import { OUTPUT_DIR, type Manifest } from 'twenty-shared/application';
+import { OUTPUT_DIR, type Manifest } from 'pm-shared/application';
 
 export type DevModeOrchestratorOptions = {
   state: OrchestratorState;

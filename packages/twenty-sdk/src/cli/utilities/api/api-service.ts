@@ -4,7 +4,7 @@ import { ApplicationApi } from '@/cli/utilities/api/application-api';
 import { FileApi } from '@/cli/utilities/api/file-api';
 import { LogicFunctionApi } from '@/cli/utilities/api/logic-function-api';
 import { SchemaApi } from '@/cli/utilities/api/schema-api';
-import { type Manifest } from 'twenty-shared/application';
+import { type Manifest } from 'pm-shared/application';
 
 type ApiServiceOptions = {
   disableInterceptors?: boolean;

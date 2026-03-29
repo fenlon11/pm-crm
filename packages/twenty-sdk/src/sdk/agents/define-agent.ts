@@ -1,6 +1,6 @@
 import { type DefineEntity } from '@/sdk/common/types/define-entity.type';
 import { createValidationResult } from '@/sdk/common/utils/create-validation-result';
-import { type AgentManifest } from 'twenty-shared/application';
+import { type AgentManifest } from 'pm-shared/application';
 
 export const defineAgent: DefineEntity<AgentManifest> = (config) => {
   const errors: string[] = [];

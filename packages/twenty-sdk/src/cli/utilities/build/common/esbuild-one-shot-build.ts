@@ -2,7 +2,7 @@ import { processEsbuildResult } from '@/cli/utilities/build/common/esbuild-resul
 import { type OnFileBuiltCallback } from '@/cli/utilities/build/common/restartable-watcher-interface';
 import * as esbuild from 'esbuild';
 import path from 'path';
-import { type FileFolder } from 'twenty-shared/types';
+import { type FileFolder } from 'pm-shared/types';
 
 export type EsbuildOneShotBuildOptions = {
   appPath: string;

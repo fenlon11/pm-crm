@@ -19,7 +19,7 @@ services:
       - twenty-redis-data:/data:Z
 
   server:
-    container_name: twenty-server
+    container_name: pm-server
     image: twentycrm/twenty:latest
     environment:
       NODE_PORT: "3000"
@@ -30,7 +30,7 @@ services:
       NODE_ENV: production
       LOG_LEVEL: info
     volumes:
-      - twenty-server-data:/app/docker-data:Z
+      - pm-server-data:/app/docker-data:Z
     ports:
       - 127.0.0.1:8080:3000
 
@@ -47,10 +47,10 @@ services:
       NODE_ENV: production
       LOG_LEVEL: info
     volumes:
-      - twenty-server-data:/app/docker-data:Z
+      - pm-server-data:/app/docker-data:Z
     init: true
 
 volumes:
   twenty-db-data:
-  twenty-server-data:
+  pm-server-data:
   twenty-redis-data:

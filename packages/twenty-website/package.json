@@ -25,10 +25,10 @@
     "next": "^14.2.25",
     "next-mdx-remote": "^6.0.0",
     "next-runtime-env": "^3.3.0",
+    "pm-ui": "workspace:*",
     "postgres": "^3.4.3",
     "react-tooltip": "^5.13.1",
-    "stripe": "^20.3.1",
-    "twenty-ui": "workspace:*"
+    "stripe": "^20.3.1"
   },
   "devDependencies": {
     "@types/facepaint": "^1.2.5",

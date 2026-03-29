@@ -3,8 +3,8 @@ import {
   type SidePanelPages,
   type EnqueueSnackbarParams,
   type NavigateOptions,
-} from 'twenty-shared/types';
-import { type getAppPath } from 'twenty-shared/utils';
+} from 'pm-shared/types';
+import { type getAppPath } from 'pm-shared/utils';
 
 export type NavigateFunction = <T extends AppPath>(
   to: T,

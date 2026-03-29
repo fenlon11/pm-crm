@@ -1,4 +1,4 @@
-import { type ObjectManifest } from 'twenty-shared/application';
+import { type ObjectManifest } from 'pm-shared/application';
 
 export type ObjectConfig = Omit<
   ObjectManifest,

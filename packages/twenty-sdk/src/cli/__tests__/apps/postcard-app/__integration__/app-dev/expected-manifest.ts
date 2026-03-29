@@ -1,13 +1,13 @@
 import { FieldType } from '@/sdk';
-import type { Manifest } from 'twenty-shared/application';
-import { PermissionFlagType } from 'twenty-shared/constants';
+import type { Manifest } from 'pm-shared/application';
+import { PermissionFlagType } from 'pm-shared/constants';
 import {
   FieldMetadataType,
   NavigationMenuItemType,
   RelationOnDeleteAction,
   RelationType,
   ViewType,
-} from 'twenty-shared/types';
+} from 'pm-shared/types';
 
 export const EXPECTED_MANIFEST: Manifest = {
   pageLayouts: [],

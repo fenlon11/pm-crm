@@ -66,22 +66,22 @@ jobs:
             node_modules/.cache
             packages/*/node_modules/.cache
 
-      - name: Build twenty-shared
-        run: npx nx build twenty-shared
+      - name: Build pm-shared
+        run: npx nx build pm-shared
 
       - name: Install Playwright Browsers
-        run: npx nx setup twenty-e2e-testing
+        run: npx nx setup pm-e2e-testing
 
       - name: Setup environment files
         run: |
-          cp packages/twenty-front/.env.example packages/twenty-front/.env
-          npx nx reset:env:e2e-testing-server twenty-server
+          cp packages/pm-front/.env.example packages/pm-front/.env
+          npx nx reset:env:e2e-testing-server pm-server
 
       - name: Build frontend
-        run: NODE_ENV=production npx nx build twenty-front
+        run: NODE_ENV=production npx nx build pm-front
 
       - name: Build server
-        run: npx nx build twenty-server
+        run: npx nx build pm-server
 
       - name: Save Nx build cache
         if: always()
@@ -97,27 +97,27 @@ jobs:
         run: |
           PGPASSWORD=postgres psql -h localhost -p 5432 -U postgres -d postgres -c 'CREATE DATABASE "default";'
           PGPASSWORD=postgres psql -h localhost -p 5432 -U postgres -d postgres -c 'CREATE DATABASE "test";'
-          npx nx run twenty-server:database:reset
+          npx nx run pm-server:database:reset
 
       - name: Start server
         run: |
-          npx nx start twenty-server &
+          npx nx start pm-server &
           echo "Waiting for server to be ready..."
           timeout 60 bash -c 'until curl -s http://localhost:3000/health; do sleep 2; done'
 
       - name: Start frontend
         run: |
-          npm_config_yes=true npx serve -s packages/twenty-front/build -l 3001 &
+          npm_config_yes=true npx serve -s packages/pm-front/build -l 3001 &
           echo "Waiting for frontend to be ready..."
           timeout 60 bash -c 'until curl -s http://localhost:3001; do sleep 2; done'
 
       - name: Start worker
         run: |
-          npx nx run twenty-server:worker &
+          npx nx run pm-server:worker &
           echo "Worker started"
 
       - name: Run Playwright tests
-        run: npx nx test twenty-e2e-testing
+        run: npx nx test pm-e2e-testing
 
       - name: Upload Playwright results
         if: always()
@@ -125,8 +125,8 @@ jobs:
         with:
           name: playwright-results
           path: |
-            packages/twenty-e2e-testing/run_results/
-            packages/twenty-e2e-testing/test-results/
+            packages/pm-e2e-testing/run_results/
+            packages/pm-e2e-testing/test-results/
           retention-days: 7
 
   ci-merge-queue-status-check:

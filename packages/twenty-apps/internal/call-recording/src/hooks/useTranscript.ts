@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 
 export type TranscriptTimestamp = {
   relative: number;

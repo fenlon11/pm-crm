@@ -111,7 +111,7 @@ export class WorkspaceSchemaMigrationRunnerActionHandlersModule {}
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 
 import { type FlatMyEntity } from 'src/engine/metadata-modules/flat-my-entity/types/flat-my-entity.type';
 import { WorkspaceManyOrAllFlatEntityMapsCacheService } from 'src/engine/metadata-modules/flat-entity/services/workspace-many-or-all-flat-entity-maps-cache.service';

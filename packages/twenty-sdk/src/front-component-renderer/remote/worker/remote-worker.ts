@@ -10,7 +10,7 @@ import {
   type RemoteRootElement,
 } from '@remote-dom/core/elements';
 
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 
 import { installStyleBridge } from '@/front-component-renderer/polyfills/installStyleBridge';
 import { installStylePropertyOnRemoteElements } from '@/front-component-renderer/remote/utils/installStylePropertyOnRemoteElements';

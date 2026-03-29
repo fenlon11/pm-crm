@@ -2,8 +2,8 @@ import chokidar, { type FSWatcher } from 'chokidar';
 import crypto from 'crypto';
 import { readFile } from 'node:fs/promises';
 import { dirname, join, relative } from 'path';
-import { OUTPUT_DIR } from 'twenty-shared/application';
-import { type FileFolder } from 'twenty-shared/types';
+import { OUTPUT_DIR } from 'pm-shared/application';
+import { type FileFolder } from 'pm-shared/types';
 
 import {
   copy,

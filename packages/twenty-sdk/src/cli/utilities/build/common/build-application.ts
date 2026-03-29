@@ -5,8 +5,8 @@ import {
   NODE_ESM_CJS_BANNER,
   OUTPUT_DIR,
   type Manifest,
-} from 'twenty-shared/application';
-import { FileFolder } from 'twenty-shared/types';
+} from 'pm-shared/application';
+import { FileFolder } from 'pm-shared/types';
 
 import { esbuildOneShotBuild } from '@/cli/utilities/build/common/esbuild-one-shot-build';
 import { LOGIC_FUNCTION_EXTERNAL_MODULES } from '@/cli/utilities/build/common/esbuild-watcher';

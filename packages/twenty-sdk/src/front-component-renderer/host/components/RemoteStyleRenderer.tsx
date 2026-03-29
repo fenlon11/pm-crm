@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 
 type RemoteStyleRendererProps = {
   cssText?: string;

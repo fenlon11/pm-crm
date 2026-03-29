@@ -1,8 +1,8 @@
-import { FieldMetadataType } from 'twenty-shared/types';
+import { FieldMetadataType } from 'pm-shared/types';
 
 import { isNonEmptyString } from '@sniptt/guards';
 
-import { type ObjectFieldManifest } from 'twenty-shared/application';
+import { type ObjectFieldManifest } from 'pm-shared/application';
 
 export const validateFields = (
   fields: ObjectFieldManifest[] | undefined,

@@ -28,11 +28,11 @@ files: [
   },
   {
     #
-    # MDX documentation files - twenty-ui
+    # MDX documentation files - pm-ui
     # Using md type to preserve JSX component structure
     #
-    "source": "packages/twenty-docs/twenty-ui/**/*.mdx",
-    "translation": "packages/twenty-docs/l/%two_letters_code%/twenty-ui/**/%original_file_name%",
+    "source": "packages/twenty-docs/pm-ui/**/*.mdx",
+    "translation": "packages/twenty-docs/l/%two_letters_code%/pm-ui/**/%original_file_name%",
   },
   {
     #

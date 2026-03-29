@@ -50,23 +50,23 @@ const nextConfig = {
       },
 
       {
-        source: '/twenty-ui',
-        destination: 'https://docs.twenty.com/twenty-ui/introduction',
+        source: '/pm-ui',
+        destination: 'https://docs.twenty.com/pm-ui/introduction',
         permanent: true,
       },
       {
-        source: '/twenty-ui/section/:folder/:slug*',
-        destination: 'https://docs.twenty.com/twenty-ui/:folder/:slug*',
+        source: '/pm-ui/section/:folder/:slug*',
+        destination: 'https://docs.twenty.com/pm-ui/:folder/:slug*',
         permanent: true,
       },
       {
-        source: '/twenty-ui/:folder/:slug*',
-        destination: 'https://docs.twenty.com/twenty-ui/:folder/:slug*',
+        source: '/pm-ui/:folder/:slug*',
+        destination: 'https://docs.twenty.com/pm-ui/:folder/:slug*',
         permanent: true,
       },
       {
-        source: '/twenty-ui/:slug',
-        destination: 'https://docs.twenty.com/twenty-ui/:slug',
+        source: '/pm-ui/:slug',
+        destination: 'https://docs.twenty.com/pm-ui/:slug',
         permanent: true,
       },
     ];

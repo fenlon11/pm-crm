@@ -1,7 +1,7 @@
 import {
   type FrontComponentCommandManifest,
   type FrontComponentManifest,
-} from 'twenty-shared/application';
+} from 'pm-shared/application';
 
 export type FrontComponentType = React.ComponentType<any>;
 

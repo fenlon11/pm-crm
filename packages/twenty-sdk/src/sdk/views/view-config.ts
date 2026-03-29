@@ -1,3 +1,3 @@
-import { type ViewManifest } from 'twenty-shared/application';
+import { type ViewManifest } from 'pm-shared/application';
 
 export type ViewConfig = ViewManifest;

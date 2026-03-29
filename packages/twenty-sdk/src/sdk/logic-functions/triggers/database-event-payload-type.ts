@@ -8,4 +8,4 @@ export type {
   ObjectRecordBaseEvent,
   ObjectRecordRestoreEvent,
   ObjectRecordUpsertEvent,
-} from 'twenty-shared/database-events';
+} from 'pm-shared/database-events';

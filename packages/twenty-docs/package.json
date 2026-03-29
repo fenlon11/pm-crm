@@ -14,7 +14,7 @@
     "mintlify": "latest"
   },
   "devDependencies": {
-    "twenty-shared": "workspace:*"
+    "pm-shared": "workspace:*"
   },
   "engines": {
     "node": "^24.5.0",

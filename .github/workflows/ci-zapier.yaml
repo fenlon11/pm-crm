@@ -19,7 +19,7 @@ jobs:
     with:
       files: |
         packages/twenty-zapier/**
-        packages/twenty-server/**
+        packages/pm-server/**
         !packages/twenty-zapier/package.json
         !packages/twenty-zapier/CHANGELOG.md
   server-setup:
@@ -54,30 +54,30 @@ jobs:
       - name: Install dependencies
         uses: ./.github/actions/yarn-install
 
-      - name: Build twenty-shared
-        run: npx nx build twenty-shared
+      - name: Build pm-shared
+        run: npx nx build pm-shared
 
       - name: Server / Write .env
-        run: npx nx reset:env:e2e-testing-server twenty-server
+        run: npx nx reset:env:e2e-testing-server pm-server
 
       - name: Server / Build
-        run: npx nx build twenty-server
+        run: npx nx build pm-server
 
       - name: Create and setup database
         run: |
           PGPASSWORD=postgres psql -h localhost -p 5432 -U postgres -d postgres -c 'CREATE DATABASE "default";'
           PGPASSWORD=postgres psql -h localhost -p 5432 -U postgres -d postgres -c 'CREATE DATABASE "test";'
-          npx nx run twenty-server:database:reset
+          npx nx run pm-server:database:reset
 
       - name: Server / Start
         run: |
-          npx nx start twenty-server &
+          npx nx start pm-server &
           echo "Waiting for server to be ready..."
           timeout 60 bash -c 'until curl -s http://localhost:3000/health; do sleep 2; done'
 
       - name: Start worker
         run: |
-          npx nx run twenty-server:worker &
+          npx nx run pm-server:worker &
           echo "Worker started"
 
       - name: Zapier / Build

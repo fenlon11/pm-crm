@@ -1,9 +1,9 @@
-import { FieldMetadataType } from 'twenty-shared/types';
+import { FieldMetadataType } from 'pm-shared/types';
 import { getDefaultFieldsInObjectFields } from '@/cli/utilities/build/manifest/utils/get-default-fields-in-object-fields';
 import { getDefaultObjectFields } from '@/cli/utilities/build/manifest/utils/get-default-object-fields';
 import type { ObjectConfig } from '@/sdk/objects/object-config';
 import { getDefaultRelationObjectFields } from '@/cli/utilities/build/manifest/utils/get-default-relation-object-fields';
-import { type ObjectFieldManifest } from 'twenty-shared/application';
+import { type ObjectFieldManifest } from 'pm-shared/application';
 
 const baseObjectConfig: ObjectConfig = {
   universalIdentifier: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',

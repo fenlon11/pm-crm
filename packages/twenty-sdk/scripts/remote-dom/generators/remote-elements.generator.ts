@@ -5,7 +5,7 @@ import {
   VariableDeclarationKind,
 } from 'ts-morph';
 
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 import {
   CUSTOM_ELEMENT_NAMES,
   INTERNAL_ELEMENT_CLASSES,

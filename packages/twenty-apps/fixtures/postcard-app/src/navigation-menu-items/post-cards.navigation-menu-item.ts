@@ -1,5 +1,5 @@
 import { defineNavigationMenuItem } from 'twenty-sdk';
-import { NavigationMenuItemType } from 'twenty-shared/types';
+import { NavigationMenuItemType } from 'pm-shared/types';
 import { POST_CARD_UNIVERSAL_IDENTIFIER } from '../objects/post-card.object';
 
 export default defineNavigationMenuItem({

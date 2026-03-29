@@ -2,7 +2,7 @@ import { functionExecute } from '@/cli/operations/execute';
 import { APP_ERROR_CODES, FUNCTION_ERROR_CODES } from '@/cli/types';
 import { CURRENT_EXECUTION_DIRECTORY } from '@/cli/utilities/config/current-execution-directory';
 import chalk from 'chalk';
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 
 export class LogicFunctionExecuteCommand {
   async execute({

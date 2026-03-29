@@ -1,7 +1,7 @@
 import { ApiService } from '@/cli/utilities/api/api-service';
 import path, { relative } from 'path';
-import { type FileFolder } from 'twenty-shared/types';
-import { OUTPUT_DIR } from 'twenty-shared/application';
+import { type FileFolder } from 'pm-shared/types';
+import { OUTPUT_DIR } from 'pm-shared/application';
 
 export class FileUploader {
   private apiService = new ApiService();

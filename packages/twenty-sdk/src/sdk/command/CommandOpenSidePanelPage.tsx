@@ -5,7 +5,7 @@ import {
 } from '@/sdk/front-component-api';
 import { useEffect, useState } from 'react';
 
-import { type SidePanelPages } from 'twenty-shared/types';
+import { type SidePanelPages } from 'pm-shared/types';
 
 export type CommandOpenSidePanelPageProps = {
   page: SidePanelPages;

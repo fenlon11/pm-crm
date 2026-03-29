@@ -1,5 +1,5 @@
 import { defineNavigationMenuItem } from 'twenty-sdk';
-import { NavigationMenuItemType } from 'twenty-shared/types';
+import { NavigationMenuItemType } from 'pm-shared/types';
 import { UNIVERSAL_IDENTIFIERS } from 'src/constants/universal-identifiers.constant';
 
 export default defineNavigationMenuItem({

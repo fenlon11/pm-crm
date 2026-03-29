@@ -3,8 +3,8 @@ export {
   NavigationMenuItemType,
   ObjectRecordGroupByDateGranularity,
   PageLayoutTabLayoutMode,
-} from 'twenty-shared/types';
-export type { PageLayoutWidgetUniversalConfiguration } from 'twenty-shared/types';
+} from 'pm-shared/types';
+export type { PageLayoutWidgetUniversalConfiguration } from 'pm-shared/types';
 export type { ApplicationConfig } from './application/application-config';
 export { defineApplication } from './application/define-application';
 export type {
@@ -140,11 +140,11 @@ export type {
   FrontComponentExecutionContext,
 } from './front-component-api';
 
-export { AppPath, SidePanelPages } from 'twenty-shared/types';
+export { AppPath, SidePanelPages } from 'pm-shared/types';
 export type {
   EnqueueSnackbarParams,
   SnackBarVariant,
-} from 'twenty-shared/types';
+} from 'pm-shared/types';
 
 // Front Component Common exports
 export {

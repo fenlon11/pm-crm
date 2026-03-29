@@ -14,9 +14,9 @@ Twenty is an open-source CRM built with modern technologies in a monorepo struct
 yarn start
 
 # Individual package development
-npx nx start twenty-front     # Start frontend dev server
-npx nx start twenty-server    # Start backend server
-npx nx run twenty-server:worker  # Start background worker
+npx nx start pm-front     # Start frontend dev server
+npx nx start pm-server    # Start backend server
+npx nx run pm-server:worker  # Start background worker
 ```
 
 ### Testing
@@ -25,15 +25,15 @@ npx nx run twenty-server:worker  # Start background worker
 npx jest path/to/test.test.ts --config=packages/PROJECT/jest.config.mjs
 
 # Run all tests for a package
-npx nx test twenty-front      # Frontend unit tests
-npx nx test twenty-server     # Backend unit tests
-npx nx run twenty-server:test:integration:with-db-reset  # Integration tests with DB reset
+npx nx test pm-front      # Frontend unit tests
+npx nx test pm-server     # Backend unit tests
+npx nx run pm-server:test:integration:with-db-reset  # Integration tests with DB reset
 # To run an indivual test or a pattern of tests, use the following command:
 cd packages/{workspace} && npx jest "pattern or filename"
 
 # Storybook
-npx nx storybook:build twenty-front
-npx nx storybook:test twenty-front
+npx nx storybook:build pm-front
+npx nx storybook:test pm-front
 
 # When testing the UI end to end, click on "Continue with Email" and use the prefilled credentials.
 ```
@@ -41,43 +41,43 @@ npx nx storybook:test twenty-front
 ### Code Quality
 ```bash
 # Linting (diff with main - fastest, always prefer this)
-npx nx lint:diff-with-main twenty-front
-npx nx lint:diff-with-main twenty-server
-npx nx lint:diff-with-main twenty-front --configuration=fix  # Auto-fix
+npx nx lint:diff-with-main pm-front
+npx nx lint:diff-with-main pm-server
+npx nx lint:diff-with-main pm-front --configuration=fix  # Auto-fix
 
 # Linting (full project - slower, use only when needed)
-npx nx lint twenty-front
-npx nx lint twenty-server
+npx nx lint pm-front
+npx nx lint pm-server
 
 # Type checking
-npx nx typecheck twenty-front
-npx nx typecheck twenty-server
+npx nx typecheck pm-front
+npx nx typecheck pm-server
 
 # Format code
-npx nx fmt twenty-front
-npx nx fmt twenty-server
+npx nx fmt pm-front
+npx nx fmt pm-server
 ```
 
 ### Build
 ```bash
-# Build packages (twenty-shared must be built first)
-npx nx build twenty-shared
-npx nx build twenty-front
-npx nx build twenty-server
+# Build packages (pm-shared must be built first)
+npx nx build pm-shared
+npx nx build pm-front
+npx nx build pm-server
 ```
 
 ### Database Operations
 ```bash
 # Database management
-npx nx database:reset twenty-server         # Reset database
-npx nx run twenty-server:database:init:prod # Initialize database
-npx nx run twenty-server:database:migrate:prod # Run migrations
+npx nx database:reset pm-server         # Reset database
+npx nx run pm-server:database:init:prod # Initialize database
+npx nx run pm-server:database:migrate:prod # Run migrations
 
 # Generate migration (replace [name] with kebab-case descriptive name)
-npx nx run twenty-server:typeorm migration:generate src/database/typeorm/core/migrations/common/[name] -d src/database/typeorm/core/core.datasource.ts
+npx nx run pm-server:typeorm migration:generate src/database/typeorm/core/migrations/common/[name] -d src/database/typeorm/core/core.datasource.ts
 
 # Sync metadata
-npx nx run twenty-server:command workspace:sync-metadata
+npx nx run pm-server:command workspace:sync-metadata
 ```
 
 ### Database Inspection (Postgres MCP)
@@ -94,8 +94,8 @@ This server is read-only — for write operations (reset, migrations, sync), use
 ### GraphQL
 ```bash
 # Generate GraphQL types (run after schema changes)
-npx nx run twenty-front:graphql:generate
-npx nx run twenty-front:graphql:generate --configuration=metadata
+npx nx run pm-front:graphql:generate
+npx nx run pm-front:graphql:generate --configuration=metadata
 ```
 
 ## Architecture Overview
@@ -108,14 +108,14 @@ npx nx run twenty-front:graphql:generate --configuration=metadata
 ### Package Structure
 ```
 packages/
-├── twenty-front/          # React frontend application
-├── twenty-server/         # NestJS backend API
-├── twenty-ui/             # Shared UI components library
-├── twenty-shared/         # Common types and utilities
-├── twenty-emails/         # Email templates with React Email
+├── pm-front/          # React frontend application
+├── pm-server/         # NestJS backend API
+├── pm-ui/             # Shared UI components library
+├── pm-shared/         # Common types and utilities
+├── pm-emails/         # Email templates with React Email
 ├── twenty-website/        # Next.js documentation website
 ├── twenty-zapier/         # Zapier integration
-└── twenty-e2e-testing/    # Playwright E2E tests
+└── pm-e2e-testing/    # Playwright E2E tests
 ```
 
 ### Key Development Principles
@@ -171,7 +171,7 @@ packages/
 - Never delete or rewrite committed migrations
 
 ### Utility Helpers
-Use existing helpers from `twenty-shared` instead of manual type guards:
+Use existing helpers from `pm-shared` instead of manual type guards:
 - `isDefined()`, `isNonEmptyString()`, `isNonEmptyArray()`
 
 ## Development Workflow

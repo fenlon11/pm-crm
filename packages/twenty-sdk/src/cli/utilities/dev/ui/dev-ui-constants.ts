@@ -6,7 +6,7 @@ import {
   type OrchestratorStateSyncStatus,
   type OrchestratorStateEntityInfo,
 } from '@/cli/utilities/dev/orchestrator/dev-mode-orchestrator-state';
-import { SyncableEntity } from 'twenty-shared/application';
+import { SyncableEntity } from 'pm-shared/application';
 
 export type DevUiStatus =
   | 'idle'

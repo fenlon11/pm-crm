@@ -10,7 +10,7 @@ export const isSectionPath = (pathname: string | undefined): boolean => {
   return startsWithAny(pathname, [
     '/developers/section',
     '/user-guide/section',
-    '/twenty-ui/section',
+    '/pm-ui/section',
   ]);
 };
 
@@ -31,7 +31,7 @@ export const shouldShowEmptySidebar = (
 ): boolean => {
   if (!pathname) return false;
   return (
-    ['/user-guide', '/developers', '/twenty-ui'].includes(pathname) ||
+    ['/user-guide', '/developers', '/pm-ui'].includes(pathname) ||
     isDocsSection(pathname) ||
     isPlaygroundPage(pathname)
   );
@@ -44,5 +44,5 @@ export const getUriAndLabel = (pathname: string) => {
   if (pathname.includes('developers')) {
     return { uri: '/developers', label: 'Developers' };
   }
-  return { uri: '/twenty-ui', label: 'UI Components' };
+  return { uri: '/pm-ui', label: 'UI Components' };
 };

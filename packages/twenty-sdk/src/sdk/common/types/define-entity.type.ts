@@ -9,7 +9,7 @@ import {
   type NavigationMenuItemManifest,
   type RoleManifest,
   type SkillManifest,
-} from 'twenty-shared/application';
+} from 'pm-shared/application';
 
 export type ValidationResult<T> = {
   success: boolean;

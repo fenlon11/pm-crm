@@ -7,7 +7,7 @@ import {
 } from 'src/constants/summarize-person-recordings-universal-identifiers';
 import { defineFrontComponent, useRecordId } from 'twenty-sdk';
 import { CoreApiClient } from 'twenty-sdk/clients';
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 
 const SUMMARIZATION_SYSTEM_PROMPT = [
   'You are a helpful assistant that summarizes call transcripts.',

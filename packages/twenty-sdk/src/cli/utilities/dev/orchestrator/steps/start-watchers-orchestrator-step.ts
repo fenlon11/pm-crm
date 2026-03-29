@@ -11,8 +11,8 @@ import { ManifestWatcher } from '@/cli/utilities/build/manifest/manifest-watcher
 import { type OrchestratorState } from '@/cli/utilities/dev/orchestrator/dev-mode-orchestrator-state';
 import type { Location } from 'esbuild';
 import { type EventName } from 'chokidar/handler.js';
-import { ASSETS_DIR } from 'twenty-shared/application';
-import { FileFolder } from 'twenty-shared/types';
+import { ASSETS_DIR } from 'pm-shared/application';
+import { FileFolder } from 'pm-shared/types';
 
 export type FileBuiltEvent = {
   fileFolder: FileFolder;

@@ -23,14 +23,14 @@ const rootNodeModules = path.resolve(dirname, '../../../../node_modules');
 
 const twentyUiIndividualIndex = path.resolve(
   dirname,
-  '../../../twenty-ui/dist/individual/individual-entry.js',
+  '../../../pm-ui/dist/individual/individual-entry.js',
 );
 
 const sdkIndividualIndex = path.resolve(dirname, '../../dist/sdk/index.js');
 
 const twentySharedIndividualDir = path.resolve(
   dirname,
-  '../../../twenty-shared/dist/individual',
+  '../../../pm-shared/dist/individual',
 );
 
 const TWENTY_SHARED_SUBMODULES = [
@@ -49,7 +49,7 @@ const TWENTY_SHARED_SUBMODULES = [
 
 const twentySharedAliases = Object.fromEntries(
   TWENTY_SHARED_SUBMODULES.map((submodule) => [
-    `twenty-shared/${submodule}`,
+    `pm-shared/${submodule}`,
     path.join(twentySharedIndividualDir, submodule, 'index.js'),
   ]),
 );
@@ -72,7 +72,7 @@ const STORY_COMPONENTS = [
   'styled-components-example.front-component',
   'shadcn-example.front-component',
   'mui-example.front-component',
-  'twenty-ui-example.front-component',
+  'pm-ui-example.front-component',
   'sdk-context-example.front-component',
 ];
 

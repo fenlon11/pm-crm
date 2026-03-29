@@ -1,4 +1,4 @@
-import { type CommandMenuContextApi } from 'twenty-shared/types';
+import { type CommandMenuContextApi } from 'pm-shared/types';
 
 export const pageType = null as unknown as CommandMenuContextApi['pageType'];
 export const isInSidePanel =

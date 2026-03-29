@@ -1,4 +1,4 @@
-import { OUTPUT_DIR } from 'twenty-shared/application';
+import { OUTPUT_DIR } from 'pm-shared/application';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { inspect } from 'util';

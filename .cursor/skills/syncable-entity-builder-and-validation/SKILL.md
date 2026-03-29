@@ -32,7 +32,7 @@ This step creates:
 ```typescript
 import { Injectable } from '@nestjs/common';
 import { t, msg } from '@lingui/macro';
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined } from 'pm-shared/utils';
 
 import { type FlatMyEntity } from 'src/engine/metadata-modules/flat-my-entity/types/flat-my-entity.type';
 import { type FlatMyEntityMaps } from 'src/engine/metadata-modules/flat-my-entity/types/flat-my-entity-maps.type';

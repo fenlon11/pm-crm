@@ -19,8 +19,8 @@ jobs:
       files: |
         package.json
         yarn.lock
-        packages/twenty-ui/**
-        packages/twenty-shared/**
+        packages/pm-ui/**
+        packages/pm-shared/**
   ui-task:
     needs: changed-files-check
     if: needs.changed-files-check.outputs.any_changed == 'true'
@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         uses: ./.github/actions/yarn-install
       - name: Run ${{ matrix.task }}
-        run: npx nx ${{ matrix.task }} twenty-ui
+        run: npx nx ${{ matrix.task }} pm-ui
   ui-sb-build:
     needs: changed-files-check
     if: needs.changed-files-check.outputs.any_changed == 'true'
@@ -59,12 +59,12 @@ jobs:
       - name: Install dependencies
         uses: ./.github/actions/yarn-install
       - name: Build storybook
-        run: npx nx storybook:build twenty-ui
+        run: npx nx storybook:build pm-ui
       - name: Upload storybook build
         uses: actions/upload-artifact@v4
         with:
-          name: storybook-twenty-ui
-          path: packages/twenty-ui/storybook-static
+          name: storybook-pm-ui
+          path: packages/pm-ui/storybook-static
           retention-days: 1
   ui-sb-test:
     timeout-minutes: 30
@@ -80,21 +80,21 @@ jobs:
       - name: Install dependencies
         uses: ./.github/actions/yarn-install
       - name: Build dependencies
-        run: npx nx build twenty-shared
+        run: npx nx build pm-shared
       - name: Download storybook build
         uses: actions/download-artifact@v4
         with:
-          name: storybook-twenty-ui
-          path: packages/twenty-ui/storybook-static
+          name: storybook-pm-ui
+          path: packages/pm-ui/storybook-static
       - name: Install Playwright
         run: |
-          cd packages/twenty-ui
+          cd packages/pm-ui
           npx playwright install
       - name: Serve storybook & run tests
         run: |
-          npx http-server packages/twenty-ui/storybook-static --port 6007 --silent &
+          npx http-server packages/pm-ui/storybook-static --port 6007 --silent &
           timeout 30 bash -c 'until curl -sf http://localhost:6007 > /dev/null 2>&1; do sleep 1; done'
-          npx nx storybook:test twenty-ui
+          npx nx storybook:test pm-ui
   ci-ui-status-check:
     if: always() && !cancelled()
     timeout-minutes: 5

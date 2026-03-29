@@ -13,7 +13,7 @@ import { LogicFunctionLogsCommand } from './logs';
 import { EntityAddCommand } from './add';
 import { registerRemoteCommands } from './remote';
 import { registerServerCommands } from './server';
-import { SyncableEntity } from 'twenty-shared/application';
+import { SyncableEntity } from 'pm-shared/application';
 
 export const registerCommands = (program: Command): void => {
   const buildCommand = new AppBuildCommand();

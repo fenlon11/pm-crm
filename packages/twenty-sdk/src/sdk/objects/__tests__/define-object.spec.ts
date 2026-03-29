@@ -1,6 +1,6 @@
 import { defineObject } from '@/sdk';
-import { type ObjectManifest } from 'twenty-shared/application';
-import { FieldMetadataType } from 'twenty-shared/types';
+import { type ObjectManifest } from 'pm-shared/application';
+import { FieldMetadataType } from 'pm-shared/types';
 
 describe('defineObject', () => {
   const validConfig: ObjectManifest = {

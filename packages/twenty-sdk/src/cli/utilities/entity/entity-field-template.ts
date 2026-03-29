@@ -1,4 +1,4 @@
-import { type FieldMetadataType } from 'twenty-shared/types';
+import { type FieldMetadataType } from 'pm-shared/types';
 import { v4 } from 'uuid';
 
 export const getFieldBaseFile = ({

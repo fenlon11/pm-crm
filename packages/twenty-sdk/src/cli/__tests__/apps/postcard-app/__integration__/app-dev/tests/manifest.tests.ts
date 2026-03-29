@@ -2,8 +2,8 @@ import { join } from 'path';
 
 import { normalizeManifestForComparison } from '@/cli/__tests__/integration/utils/normalize-manifest.util';
 import { readJson } from '@/cli/utilities/file/fs-utils';
-import { type Manifest } from 'twenty-shared/application';
-import { NavigationMenuItemType } from 'twenty-shared/types';
+import { type Manifest } from 'pm-shared/application';
+import { NavigationMenuItemType } from 'pm-shared/types';
 import { EXPECTED_MANIFEST } from '../expected-manifest';
 
 export const defineManifestTests = (appPath: string): void => {

@@ -1,7 +1,7 @@
 import { type ApiService } from '@/cli/utilities/api/api-service';
 import { type ConfigService } from '@/cli/utilities/config/config-service';
 import { type OrchestratorState } from '@/cli/utilities/dev/orchestrator/dev-mode-orchestrator-state';
-import { type Manifest } from 'twenty-shared/application';
+import { type Manifest } from 'pm-shared/application';
 
 export type RegisterAppOrchestratorStepOutput = {
   applicationRegistrationId: string | null;
