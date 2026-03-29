@@ -3,7 +3,7 @@ import { t } from '@lingui/core/macro';
 import { IconExternalLink } from 'pm-ui/display';
 
 const DOCS_URL =
-  'https://twenty.com/developers/section/self-hosting/self-hosting-var#ai-features';
+  'https://persistentmomentum.com/docs/self-hosting/environment-variables#ai-features';
 
 export const AIChatApiKeyNotConfiguredMessage = () => {
   const handleDocsClick = () => {
