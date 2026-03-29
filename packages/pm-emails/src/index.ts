@@ -1,7 +1,11 @@
 export type { JSONContent } from '@tiptap/core';
+export * from './emails/application-received.email';
 export * from './emails/clean-suspended-workspace.email';
+export * from './emails/interview-scheduled.email';
+export * from './emails/offer-extended.email';
 export * from './emails/password-reset-link.email';
 export * from './emails/password-update-notify.email';
+export * from './emails/rejection.email';
 export * from './emails/send-email-verification-link.email';
 export * from './emails/send-invite-link.email';
 export * from './emails/validate-approved-access-domain.email';
