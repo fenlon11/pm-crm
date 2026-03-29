@@ -46,6 +46,11 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
+    "./brand": {
+      "types": "./dist/brand/index.d.ts",
+      "import": "./dist/brand.mjs",
+      "require": "./dist/brand.cjs"
+    },
     "./ai": {
       "types": "./dist/ai/index.d.ts",
       "import": "./dist/ai.mjs",
@@ -114,6 +119,7 @@
   },
   "files": [
     "dist",
+    "brand",
     "ai",
     "application",
     "constants",
@@ -130,6 +136,9 @@
   ],
   "typesVersions": {
     "*": {
+      "brand": [
+        "dist/brand/index.d.ts"
+      ],
       "ai": [
         "dist/ai/index.d.ts"
       ],
