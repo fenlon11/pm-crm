@@ -31,6 +31,9 @@ export enum AppPath {
 
   Authorize = '/authorize',
 
+  // Public routes
+  JobBoard = '/jobs/:jobId',
+
   // 404 page not found
   NotFoundWildcard = '*',
   NotFound = '/not-found',

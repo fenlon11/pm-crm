@@ -46,6 +46,12 @@ const Authorize = lazy(() =>
   })),
 );
 
+const JobBoardPage = lazy(() =>
+  import('~/pages/job-board/JobBoardPage').then((module) => ({
+    default: module.JobBoardPage,
+  })),
+);
+
 const CreateWorkspace = lazy(() =>
   import('~/pages/onboarding/CreateWorkspace').then((module) => ({
     default: module.CreateWorkspace,
@@ -244,6 +250,14 @@ export const useCreateAppRouter = (
             element={
               <LazyRoute>
                 <Authorize />
+              </LazyRoute>
+            }
+          />
+          <Route
+            path={AppPath.JobBoard}
+            element={
+              <LazyRoute>
+                <JobBoardPage />
               </LazyRoute>
             }
           />
