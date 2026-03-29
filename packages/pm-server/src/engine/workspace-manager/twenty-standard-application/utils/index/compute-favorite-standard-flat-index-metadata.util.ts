@@ -148,4 +148,28 @@ export const buildFavoriteStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
+  candidateIdIndex: createStandardIndexFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      indexName: 'candidateIdIndex',
+      relatedFieldNames: ['candidate'],
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  jobIdIndex: createStandardIndexFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      indexName: 'jobIdIndex',
+      relatedFieldNames: ['job'],
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
 });

@@ -3,6 +3,7 @@ import { type FlatEntityMaps } from 'src/engine/metadata-modules/flat-entity/typ
 import { addFlatEntityToFlatEntityMapsOrThrow } from 'src/engine/metadata-modules/flat-entity/utils/add-flat-entity-to-flat-entity-maps-or-throw.util';
 import { type FlatViewGroup } from 'src/engine/metadata-modules/flat-view-group/types/flat-view-group.type';
 import { type AllStandardObjectName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-name.type';
+import { computeStandardCandidateViewGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-group/compute-standard-candidate-view-groups.util';
 import { computeStandardOpportunityViewGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-group/compute-standard-opportunity-view-groups.util';
 import { type CreateStandardViewGroupArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-group/create-standard-view-group-flat-metadata.util';
 import { computeStandardTaskViewGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-group/compute-standard-task-view-groups.util';
@@ -12,6 +13,7 @@ type StandardViewGroupBuilder<P extends AllStandardObjectName> = (
 ) => Record<string, FlatViewGroup>;
 
 const STANDARD_FLAT_VIEW_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
+  candidate: computeStandardCandidateViewGroups,
   opportunity: computeStandardOpportunityViewGroups,
   task: computeStandardTaskViewGroups,
 } as const satisfies {

@@ -47,6 +47,12 @@ export const STANDARD_OBJECTS = {
       targetOpportunity: {
         universalIdentifier: '20202020-7374-499d-bea3-9354890755b5',
       },
+      targetCandidate: {
+        universalIdentifier: '20202020-ac01-4001-8001-ac0000000001',
+      },
+      targetJob: {
+        universalIdentifier: '20202020-ac02-4002-8002-ac0000000001',
+      },
       targetDashboard: {
         universalIdentifier: '20202020-5324-43f3-9dbf-1a33e7de0ce6',
       },
@@ -85,6 +91,12 @@ export const STANDARD_OBJECTS = {
       workflowIdIndex: {
         universalIdentifier: 'fadeab4b-79ee-4173-af79-72c51fbad888',
       },
+      candidateIdIndex: {
+        universalIdentifier: '20202020-ac03-4003-8003-ac0000000001',
+      },
+      jobIdIndex: {
+        universalIdentifier: '20202020-ac04-4004-8004-ac0000000001',
+      },
     },
     views: {
       allAttachments: {
@@ -110,6 +122,12 @@ export const STANDARD_OBJECTS = {
           },
           targetOpportunity: {
             universalIdentifier: '15f2d457-dc09-4c52-bf2a-47083d6bf017',
+          },
+          targetCandidate: {
+            universalIdentifier: '20202020-ac05-4005-8005-ac0000000001',
+          },
+          targetJob: {
+            universalIdentifier: '20202020-ac06-4006-8006-ac0000000001',
           },
           targetTask: {
             universalIdentifier: 'c2913c5e-6cc6-438d-9c2f-3212a9b2a82b',
@@ -716,6 +734,12 @@ export const STANDARD_OBJECTS = {
       searchVector: {
         universalIdentifier: '85c71601-72f9-4b7b-b343-d46100b2c74d',
       },
+      candidates: {
+        universalIdentifier: '20202020-co01-4001-8001-ca0000000001',
+      },
+      jobs: {
+        universalIdentifier: '20202020-co02-4002-8002-ca0000000001',
+      },
     },
     indexes: {
       accountOwnerIdIndex: {
@@ -1038,6 +1062,8 @@ export const STANDARD_OBJECTS = {
       opportunity: {
         universalIdentifier: '20202020-dabc-48e1-8318-2781a2b32aa2',
       },
+      candidate: { universalIdentifier: '20202020-fc01-4001-8001-fc0000000001' },
+      job: { universalIdentifier: '20202020-fc02-4002-8002-fc0000000001' },
       workflow: { universalIdentifier: '20202020-b11b-4dc8-999a-6bd0a947b463' },
       workflowVersion: {
         universalIdentifier: '20202020-e1b8-4caf-b55a-3ab4d4cbcd21',
@@ -1098,6 +1124,12 @@ export const STANDARD_OBJECTS = {
       dashboardIdIndex: {
         universalIdentifier: '8783e8f2-9114-4d6a-8e5f-12c3d1465673',
       },
+      candidateIdIndex: {
+        universalIdentifier: '20202020-fc03-4003-8003-fc0000000001',
+      },
+      jobIdIndex: {
+        universalIdentifier: '20202020-fc04-4004-8004-fc0000000001',
+      },
     },
     views: {
       allFavorites: {
@@ -1114,6 +1146,12 @@ export const STANDARD_OBJECTS = {
           },
           opportunity: {
             universalIdentifier: 'e882556d-1b29-4279-88ba-eab09f7590b9',
+          },
+          candidate: {
+            universalIdentifier: '20202020-fc05-4005-8005-fc0000000001',
+          },
+          job: {
+            universalIdentifier: '20202020-fc06-4006-8006-fc0000000001',
           },
           task: {
             universalIdentifier: '0124e873-f72e-4bc2-8158-efd8efa02432',
@@ -1154,6 +1192,12 @@ export const STANDARD_OBJECTS = {
           },
           opportunity: {
             universalIdentifier: '9880a34a-4186-40c8-94ac-161ed776b5b4',
+          },
+          candidate: {
+            universalIdentifier: '20202020-fc07-4007-8007-fc0000000001',
+          },
+          job: {
+            universalIdentifier: '20202020-fc08-4008-8008-fc0000000001',
           },
           task: {
             universalIdentifier: '4c0db772-05f8-41e7-801e-5a0224bed0b8',
@@ -2078,6 +2122,12 @@ export const STANDARD_OBJECTS = {
       targetOpportunity: {
         universalIdentifier: '20202020-4e42-417a-a705-76581c9ade79',
       },
+      targetCandidate: {
+        universalIdentifier: '20202020-nc01-4001-8001-nc0000000001',
+      },
+      targetJob: {
+        universalIdentifier: '20202020-nc02-4002-8002-nc0000000001',
+      },
       createdBy: {
         universalIdentifier: '820a3163-bb7d-41bc-93d9-81a464559c48',
       },
@@ -2107,6 +2157,12 @@ export const STANDARD_OBJECTS = {
       opportunityIdIndex: {
         universalIdentifier: '0d1a59b4-cc87-4b7d-804a-656e8504f371',
       },
+      candidateIdIndex: {
+        universalIdentifier: '20202020-nc03-4003-8003-nc0000000001',
+      },
+      jobIdIndex: {
+        universalIdentifier: '20202020-nc04-4004-8004-nc0000000001',
+      },
     },
     views: {
       allNoteTargets: {
@@ -2126,6 +2182,12 @@ export const STANDARD_OBJECTS = {
           },
           targetOpportunity: {
             universalIdentifier: '3efeb162-cd03-458b-9c7b-47032d045204',
+          },
+          targetCandidate: {
+            universalIdentifier: '20202020-nc05-4005-8005-nc0000000001',
+          },
+          targetJob: {
+            universalIdentifier: '20202020-nc06-4006-8006-nc0000000001',
           },
         },
       },
@@ -2748,6 +2810,12 @@ export const STANDARD_OBJECTS = {
       targetOpportunity: {
         universalIdentifier: '20202020-6cb2-4c01-a9a5-aca3dbc11d41',
       },
+      targetCandidate: {
+        universalIdentifier: '20202020-tc01-4001-8001-tc0000000001',
+      },
+      targetJob: {
+        universalIdentifier: '20202020-tc02-4002-8002-tc0000000001',
+      },
       createdBy: {
         universalIdentifier: '65fe2a53-45e4-4225-9711-b827f55e51cc',
       },
@@ -2777,6 +2845,12 @@ export const STANDARD_OBJECTS = {
       opportunityIdIndex: {
         universalIdentifier: '6942e0ba-90f6-4c33-bf40-7f00b1ec35ab',
       },
+      candidateIdIndex: {
+        universalIdentifier: '20202020-tc03-4003-8003-tc0000000001',
+      },
+      jobIdIndex: {
+        universalIdentifier: '20202020-tc04-4004-8004-tc0000000001',
+      },
     },
     views: {
       allTaskTargets: {
@@ -2796,6 +2870,12 @@ export const STANDARD_OBJECTS = {
           },
           targetOpportunity: {
             universalIdentifier: '526f3354-34d6-4e7e-a870-5f99c28353c2',
+          },
+          targetCandidate: {
+            universalIdentifier: '20202020-tc05-4005-8005-tc0000000001',
+          },
+          targetJob: {
+            universalIdentifier: '20202020-tc06-4006-8006-tc0000000001',
           },
         },
       },
@@ -2832,6 +2912,12 @@ export const STANDARD_OBJECTS = {
       },
       targetOpportunity: {
         universalIdentifier: '20202020-7664-4a35-a3df-580d389fd527',
+      },
+      targetCandidate: {
+        universalIdentifier: '20202020-la01-4001-8001-la0000000001',
+      },
+      targetJob: {
+        universalIdentifier: '20202020-la02-4002-8002-la0000000001',
       },
       targetTask: {
         universalIdentifier: '20202020-b2f5-415c-9135-a31dfe49501b',
@@ -2907,6 +2993,12 @@ export const STANDARD_OBJECTS = {
       dashboardIdIndex: {
         universalIdentifier: 'e8821da9-728d-470a-bf5b-5a981fff7880',
       },
+      candidateIdIndex: {
+        universalIdentifier: '20202020-la03-4003-8003-la0000000001',
+      },
+      jobIdIndex: {
+        universalIdentifier: '20202020-la04-4004-8004-la0000000001',
+      },
     },
     views: {
       allTimelineActivities: {
@@ -2935,6 +3027,12 @@ export const STANDARD_OBJECTS = {
           },
           targetOpportunity: {
             universalIdentifier: 'f7b5ced9-eba6-4454-8849-7a92d27c11ca',
+          },
+          targetCandidate: {
+            universalIdentifier: '20202020-la05-4005-8005-la0000000001',
+          },
+          targetJob: {
+            universalIdentifier: '20202020-la06-4006-8006-la0000000001',
           },
           targetTask: {
             universalIdentifier: '3899138d-e6fa-414c-9432-214c9b797ebb',
@@ -3517,6 +3615,178 @@ export const STANDARD_OBJECTS = {
           assignedTasks: {
             universalIdentifier: 'af16226e-6375-4676-8bd9-9d1a57076fc4',
           },
+        },
+      },
+    },
+  },
+  candidate: {
+    universalIdentifier: '20202020-ca00-4000-8000-ca0000000001',
+    fields: {
+      id: { universalIdentifier: '20202020-ca01-4001-8001-ca0000000001' },
+      createdAt: { universalIdentifier: '20202020-ca02-4002-8002-ca0000000001' },
+      updatedAt: { universalIdentifier: '20202020-ca03-4003-8003-ca0000000001' },
+      deletedAt: { universalIdentifier: '20202020-ca04-4004-8004-ca0000000001' },
+      name: { universalIdentifier: '20202020-ca05-4005-8005-ca0000000001' },
+      email: { universalIdentifier: '20202020-ca06-4006-8006-ca0000000001' },
+      phone: { universalIdentifier: '20202020-ca07-4007-8007-ca0000000001' },
+      resumeUrl: { universalIdentifier: '20202020-ca08-4008-8008-ca0000000001' },
+      source: { universalIdentifier: '20202020-ca09-4009-8009-ca0000000001' },
+      currentCompany: { universalIdentifier: '20202020-ca0a-400a-800a-ca0000000001' },
+      currentTitle: { universalIdentifier: '20202020-ca0b-400b-800b-ca0000000001' },
+      linkedInUrl: { universalIdentifier: '20202020-ca0c-400c-800c-ca0000000001' },
+      status: { universalIdentifier: '20202020-ca0d-400d-800d-ca0000000001' },
+      notes: { universalIdentifier: '20202020-ca0e-400e-800e-ca0000000001' },
+      position: { universalIdentifier: '20202020-ca0f-400f-800f-ca0000000001' },
+      createdBy: { universalIdentifier: '20202020-ca10-4010-8010-ca0000000001' },
+      updatedBy: { universalIdentifier: '20202020-ca11-4011-8011-ca0000000001' },
+      company: { universalIdentifier: '20202020-ca12-4012-8012-ca0000000001' },
+      job: { universalIdentifier: '20202020-ca19-4019-8019-ca0000000001' },
+      favorites: { universalIdentifier: '20202020-ca13-4013-8013-ca0000000001' },
+      taskTargets: { universalIdentifier: '20202020-ca14-4014-8014-ca0000000001' },
+      noteTargets: { universalIdentifier: '20202020-ca15-4015-8015-ca0000000001' },
+      attachments: { universalIdentifier: '20202020-ca16-4016-8016-ca0000000001' },
+      timelineActivities: { universalIdentifier: '20202020-ca17-4017-8017-ca0000000001' },
+      searchVector: { universalIdentifier: '20202020-ca18-4018-8018-ca0000000001' },
+    },
+    indexes: {
+      companyIdIndex: { universalIdentifier: '20202020-ca30-4030-8030-ca0000000001' },
+      statusIndex: { universalIdentifier: '20202020-ca31-4031-8031-ca0000000001' },
+      searchVectorGinIndex: { universalIdentifier: '20202020-ca32-4032-8032-ca0000000001' },
+    },
+    views: {
+      allCandidates: {
+        universalIdentifier: '20202020-ca40-4040-8040-ca0000000001',
+        viewFields: {
+          name: { universalIdentifier: '20202020-ca41-4041-8041-ca0000000001' },
+          status: { universalIdentifier: '20202020-ca42-4042-8042-ca0000000001' },
+          email: { universalIdentifier: '20202020-ca43-4043-8043-ca0000000001' },
+          currentTitle: { universalIdentifier: '20202020-ca44-4044-8044-ca0000000001' },
+          company: { universalIdentifier: '20202020-ca45-4045-8045-ca0000000001' },
+          source: { universalIdentifier: '20202020-ca46-4046-8046-ca0000000001' },
+        },
+      },
+      byStatus: {
+        universalIdentifier: '20202020-ca50-4050-8050-ca0000000001',
+        viewFields: {
+          name: { universalIdentifier: '20202020-ca51-4051-8051-ca0000000001' },
+          status: { universalIdentifier: '20202020-ca52-4052-8052-ca0000000001' },
+          email: { universalIdentifier: '20202020-ca53-4053-8053-ca0000000001' },
+          currentTitle: { universalIdentifier: '20202020-ca54-4054-8054-ca0000000001' },
+          company: { universalIdentifier: '20202020-ca55-4055-8055-ca0000000001' },
+          source: { universalIdentifier: '20202020-ca56-4056-8056-ca0000000001' },
+        },
+        viewGroups: {
+          applied: { universalIdentifier: '20202020-ca60-4060-8060-ca0000000001' },
+          screening: { universalIdentifier: '20202020-ca61-4061-8061-ca0000000001' },
+          interview: { universalIdentifier: '20202020-ca62-4062-8062-ca0000000001' },
+          offer: { universalIdentifier: '20202020-ca63-4063-8063-ca0000000001' },
+          hired: { universalIdentifier: '20202020-ca64-4064-8064-ca0000000001' },
+          rejected: { universalIdentifier: '20202020-ca65-4065-8065-ca0000000001' },
+          withdrawn: { universalIdentifier: '20202020-ca66-4066-8066-ca0000000001' },
+        },
+      },
+      candidateRecordPageFields: {
+        universalIdentifier: '20202020-ca70-4070-8070-ca0000000001',
+        viewFieldGroups: {
+          general: { universalIdentifier: '20202020-ca71-4071-8071-ca0000000001' },
+          additional: { universalIdentifier: '20202020-ca72-4072-8072-ca0000000001' },
+          other: { universalIdentifier: '20202020-ca73-4073-8073-ca0000000001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: '20202020-ca74-4074-8074-ca0000000001' },
+          email: { universalIdentifier: '20202020-ca75-4075-8075-ca0000000001' },
+          phone: { universalIdentifier: '20202020-ca76-4076-8076-ca0000000001' },
+          status: { universalIdentifier: '20202020-ca77-4077-8077-ca0000000001' },
+          company: { universalIdentifier: '20202020-ca78-4078-8078-ca0000000001' },
+          currentTitle: { universalIdentifier: '20202020-ca79-4079-8079-ca0000000001' },
+          currentCompany: { universalIdentifier: '20202020-ca7a-407a-807a-ca0000000001' },
+          source: { universalIdentifier: '20202020-ca7b-407b-807b-ca0000000001' },
+          linkedInUrl: { universalIdentifier: '20202020-ca7c-407c-807c-ca0000000001' },
+          resumeUrl: { universalIdentifier: '20202020-ca7d-407d-807d-ca0000000001' },
+          notes: { universalIdentifier: '20202020-ca7e-407e-807e-ca0000000001' },
+          job: { universalIdentifier: '20202020-ca8a-408a-808a-ca0000000001' },
+          createdAt: { universalIdentifier: '20202020-ca7f-407f-807f-ca0000000001' },
+          createdBy: { universalIdentifier: '20202020-ca80-4080-8080-ca0000000001' },
+          updatedAt: { universalIdentifier: '20202020-ca81-4081-8081-ca0000000001' },
+          updatedBy: { universalIdentifier: '20202020-ca82-4082-8082-ca0000000001' },
+          favorites: { universalIdentifier: '20202020-ca83-4083-8083-ca0000000001' },
+          taskTargets: { universalIdentifier: '20202020-ca84-4084-8084-ca0000000001' },
+          noteTargets: { universalIdentifier: '20202020-ca85-4085-8085-ca0000000001' },
+          attachments: { universalIdentifier: '20202020-ca86-4086-8086-ca0000000001' },
+          timelineActivities: { universalIdentifier: '20202020-ca87-4087-8087-ca0000000001' },
+        },
+      },
+    },
+  },
+  job: {
+    universalIdentifier: '20202020-cb00-4000-8000-cb0000000001',
+    fields: {
+      id: { universalIdentifier: '20202020-cb01-4001-8001-cb0000000001' },
+      createdAt: { universalIdentifier: '20202020-cb02-4002-8002-cb0000000001' },
+      updatedAt: { universalIdentifier: '20202020-cb03-4003-8003-cb0000000001' },
+      deletedAt: { universalIdentifier: '20202020-cb04-4004-8004-cb0000000001' },
+      title: { universalIdentifier: '20202020-cb05-4005-8005-cb0000000001' },
+      description: { universalIdentifier: '20202020-cb06-4006-8006-cb0000000001' },
+      requirements: { universalIdentifier: '20202020-cb07-4007-8007-cb0000000001' },
+      location: { universalIdentifier: '20202020-cb08-4008-8008-cb0000000001' },
+      salaryRange: { universalIdentifier: '20202020-cb09-4009-8009-cb0000000001' },
+      department: { universalIdentifier: '20202020-cb0a-400a-800a-cb0000000001' },
+      status: { universalIdentifier: '20202020-cb0b-400b-800b-cb0000000001' },
+      position: { universalIdentifier: '20202020-cb0c-400c-800c-cb0000000001' },
+      createdBy: { universalIdentifier: '20202020-cb0d-400d-800d-cb0000000001' },
+      updatedBy: { universalIdentifier: '20202020-cb0e-400e-800e-cb0000000001' },
+      company: { universalIdentifier: '20202020-cb0f-400f-800f-cb0000000001' },
+      candidates: { universalIdentifier: '20202020-cb10-4010-8010-cb0000000001' },
+      favorites: { universalIdentifier: '20202020-cb11-4011-8011-cb0000000001' },
+      taskTargets: { universalIdentifier: '20202020-cb12-4012-8012-cb0000000001' },
+      noteTargets: { universalIdentifier: '20202020-cb13-4013-8013-cb0000000001' },
+      attachments: { universalIdentifier: '20202020-cb14-4014-8014-cb0000000001' },
+      timelineActivities: { universalIdentifier: '20202020-cb15-4015-8015-cb0000000001' },
+      searchVector: { universalIdentifier: '20202020-cb16-4016-8016-cb0000000001' },
+    },
+    indexes: {
+      companyIdIndex: { universalIdentifier: '20202020-cb40-4040-8040-cb0000000001' },
+      statusIndex: { universalIdentifier: '20202020-cb41-4041-8041-cb0000000001' },
+      searchVectorGinIndex: { universalIdentifier: '20202020-cb42-4042-8042-cb0000000001' },
+    },
+    views: {
+      allJobs: {
+        universalIdentifier: '20202020-cb50-4050-8050-cb0000000001',
+        viewFields: {
+          title: { universalIdentifier: '20202020-cb51-4051-8051-cb0000000001' },
+          status: { universalIdentifier: '20202020-cb52-4052-8052-cb0000000001' },
+          company: { universalIdentifier: '20202020-cb53-4053-8053-cb0000000001' },
+          location: { universalIdentifier: '20202020-cb54-4054-8054-cb0000000001' },
+          department: { universalIdentifier: '20202020-cb55-4055-8055-cb0000000001' },
+          createdAt: { universalIdentifier: '20202020-cb56-4056-8056-cb0000000001' },
+        },
+      },
+      jobRecordPageFields: {
+        universalIdentifier: '20202020-cb60-4060-8060-cb0000000001',
+        viewFieldGroups: {
+          general: { universalIdentifier: '20202020-cb61-4061-8061-cb0000000001' },
+          additional: { universalIdentifier: '20202020-cb62-4062-8062-cb0000000001' },
+          other: { universalIdentifier: '20202020-cb63-4063-8063-cb0000000001' },
+        },
+        viewFields: {
+          title: { universalIdentifier: '20202020-cb64-4064-8064-cb0000000001' },
+          status: { universalIdentifier: '20202020-cb65-4065-8065-cb0000000001' },
+          company: { universalIdentifier: '20202020-cb66-4066-8066-cb0000000001' },
+          location: { universalIdentifier: '20202020-cb67-4067-8067-cb0000000001' },
+          department: { universalIdentifier: '20202020-cb68-4068-8068-cb0000000001' },
+          salaryRange: { universalIdentifier: '20202020-cb69-4069-8069-cb0000000001' },
+          description: { universalIdentifier: '20202020-cb6a-406a-806a-cb0000000001' },
+          requirements: { universalIdentifier: '20202020-cb6b-406b-806b-cb0000000001' },
+          candidates: { universalIdentifier: '20202020-cb6c-406c-806c-cb0000000001' },
+          createdAt: { universalIdentifier: '20202020-cb6d-406d-806d-cb0000000001' },
+          createdBy: { universalIdentifier: '20202020-cb6e-406e-806e-cb0000000001' },
+          updatedAt: { universalIdentifier: '20202020-cb6f-406f-806f-cb0000000001' },
+          updatedBy: { universalIdentifier: '20202020-cb70-4070-8070-cb0000000001' },
+          favorites: { universalIdentifier: '20202020-cb71-4071-8071-cb0000000001' },
+          taskTargets: { universalIdentifier: '20202020-cb72-4072-8072-cb0000000001' },
+          noteTargets: { universalIdentifier: '20202020-cb73-4073-8073-cb0000000001' },
+          attachments: { universalIdentifier: '20202020-cb74-4074-8074-cb0000000001' },
+          timelineActivities: { universalIdentifier: '20202020-cb75-4075-8075-cb0000000001' },
         },
       },
     },

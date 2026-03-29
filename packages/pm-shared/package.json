@@ -46,11 +46,6 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
-    "./brand": {
-      "types": "./dist/brand/index.d.ts",
-      "import": "./dist/brand.mjs",
-      "require": "./dist/brand.cjs"
-    },
     "./ai": {
       "types": "./dist/ai/index.d.ts",
       "import": "./dist/ai.mjs",
@@ -60,6 +55,11 @@
       "types": "./dist/application/index.d.ts",
       "import": "./dist/application.mjs",
       "require": "./dist/application.cjs"
+    },
+    "./brand": {
+      "types": "./dist/brand/index.d.ts",
+      "import": "./dist/brand.mjs",
+      "require": "./dist/brand.cjs"
     },
     "./constants": {
       "types": "./dist/constants/index.d.ts",
@@ -119,9 +119,9 @@
   },
   "files": [
     "dist",
-    "brand",
     "ai",
     "application",
+    "brand",
     "constants",
     "database-events",
     "logic-function",
@@ -136,14 +136,14 @@
   ],
   "typesVersions": {
     "*": {
-      "brand": [
-        "dist/brand/index.d.ts"
-      ],
       "ai": [
         "dist/ai/index.d.ts"
       ],
       "application": [
         "dist/application/index.d.ts"
+      ],
+      "brand": [
+        "dist/brand/index.d.ts"
       ],
       "constants": [
         "dist/constants/index.d.ts"

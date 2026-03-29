@@ -7,7 +7,9 @@ import { computeStandardBlocklistViewFieldGroups } from 'src/engine/workspace-ma
 import { computeStandardCalendarChannelViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-calendar-channel-view-field-groups.util';
 import { computeStandardCalendarChannelEventAssociationViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-calendar-channel-event-association-view-field-groups.util';
 import { computeStandardCalendarEventParticipantViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-calendar-event-participant-view-field-groups.util';
+import { computeStandardCandidateViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-candidate-view-field-groups.util';
 import { computeStandardCompanyViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-company-view-field-groups.util';
+import { computeStandardJobViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-job-view-field-groups.util';
 import { computeStandardConnectedAccountViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-connected-account-view-field-groups.util';
 import { computeStandardFavoriteViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-favorite-view-field-groups.util';
 import { computeStandardFavoriteFolderViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-favorite-folder-view-field-groups.util';
@@ -31,6 +33,7 @@ type StandardViewFieldGroupBuilder<P extends AllStandardObjectName> = (
 
 const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
   blocklist: computeStandardBlocklistViewFieldGroups,
+  candidate: computeStandardCandidateViewFieldGroups,
   calendarChannel: computeStandardCalendarChannelViewFieldGroups,
   calendarChannelEventAssociation:
     computeStandardCalendarChannelEventAssociationViewFieldGroups,
@@ -48,6 +51,7 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
   messageFolder: computeStandardMessageFolderViewFieldGroups,
   messageParticipant: computeStandardMessageParticipantViewFieldGroups,
   note: computeStandardNoteViewFieldGroups,
+  job: computeStandardJobViewFieldGroups,
   opportunity: computeStandardOpportunityViewFieldGroups,
   person: computeStandardPersonViewFieldGroups,
   task: computeStandardTaskViewFieldGroups,

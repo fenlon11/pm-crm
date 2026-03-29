@@ -1,2 +1,11 @@
-export { getBrandConfig } from './brand.config';
+/*
+ * _____                    _
+ *|_   _|_      _____ _ __ | |_ _   _
+ *  | | \ \ /\ / / _ \ '_ \| __| | | | Auto-generated file
+ *  | |  \ V  V /  __/ | | | |_| |_| | Any edits to this will be overridden
+ *  |_|   \_/\_/ \___|_| |_|\__|\__, |
+ *                              |___/
+ */
+
 export type { BrandConfig } from './brand.config';
+export { getBrandConfig } from './brand.config';

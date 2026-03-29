@@ -25,6 +25,8 @@ import { computeStandardMessageThreadViewFields } from 'src/engine/workspace-man
 import { computeStandardMessageViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-message-view-fields.util';
 import { computeStandardNoteTargetViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-note-target-view-fields.util';
 import { computeStandardNoteViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-note-view-fields.util';
+import { computeStandardCandidateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-candidate-view-fields.util';
+import { computeStandardJobViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-job-view-fields.util';
 import { computeStandardOpportunityViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-opportunity-view-fields.util';
 import { computeStandardPersonViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-person-view-fields.util';
 import { computeStandardTaskTargetViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-task-target-view-fields.util';
@@ -49,7 +51,9 @@ const STANDARD_FLAT_VIEW_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
     computeStandardCalendarChannelEventAssociationViewFields,
   calendarEvent: computeStandardCalendarEventViewFields,
   calendarEventParticipant: computeStandardCalendarEventParticipantViewFields,
+  candidate: computeStandardCandidateViewFields,
   company: computeStandardCompanyViewFields,
+  job: computeStandardJobViewFields,
   connectedAccount: computeStandardConnectedAccountViewFields,
   dashboard: computeStandardDashboardViewFields,
   favorite: computeStandardFavoriteViewFields,

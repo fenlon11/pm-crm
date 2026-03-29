@@ -1,8 +1,10 @@
 import { BaseWorkspaceEntity } from 'src/engine/twenty-orm/base.workspace-entity';
 import { type CustomWorkspaceEntity } from 'src/engine/twenty-orm/custom.workspace-entity';
 import { type EntityRelation } from 'src/engine/workspace-manager/workspace-migration/types/entity-relation.interface';
+import { type CandidateWorkspaceEntity } from 'src/modules/candidate/standard-objects/candidate.workspace-entity';
 import { type CompanyWorkspaceEntity } from 'src/modules/company/standard-objects/company.workspace-entity';
 import { type DashboardWorkspaceEntity } from 'src/modules/dashboard/standard-objects/dashboard.workspace-entity';
+import { type JobWorkspaceEntity } from 'src/modules/job/standard-objects/job.workspace-entity';
 import { type FavoriteFolderWorkspaceEntity } from 'src/modules/favorite-folder/standard-objects/favorite-folder.workspace-entity';
 import { type NoteWorkspaceEntity } from 'src/modules/note/standard-objects/note.workspace-entity';
 import { type OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
@@ -25,6 +27,10 @@ export class FavoriteWorkspaceEntity extends BaseWorkspaceEntity {
   favoriteFolderId: string;
   opportunity: EntityRelation<OpportunityWorkspaceEntity> | null;
   opportunityId: string;
+  candidate: EntityRelation<CandidateWorkspaceEntity> | null;
+  candidateId: string;
+  job: EntityRelation<JobWorkspaceEntity> | null;
+  jobId: string;
   workflow: EntityRelation<WorkflowWorkspaceEntity> | null;
   workflowId: string;
   workflowVersion: EntityRelation<WorkflowVersionWorkspaceEntity> | null;
