@@ -12,7 +12,7 @@ export const baseSchema = (
   return {
     openapi: '3.1.1',
     info: {
-      title: 'Twenty Api',
+      title: 'Persistent Recruiter API',
       description: `Use this page to explore and call the **REST API**.
 
 ## Authentication
@@ -155,8 +155,8 @@ Notes:
       },
     ],
     externalDocs: {
-      description: 'Find out more about **Twenty**',
-      url: 'https://twenty.com',
+      description: 'Find out more about **Persistent Momentum**',
+      url: 'https://persistentmomentum.com',
     },
     paths: { [`/open-api/${schemaName}`]: computeOpenApiPath(serverUrl) },
   };
