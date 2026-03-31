@@ -3,7 +3,7 @@ import { Text } from '@react-email/components';
 import { emailTheme } from 'src/common-style';
 
 type MainTextProps = {
-  children: JSX.Element | JSX.Element[] | string;
+  children: JSX.Element | JSX.Element[] | string | null | (string | JSX.Element | null)[];
 };
 
 const mainTextStyle = {

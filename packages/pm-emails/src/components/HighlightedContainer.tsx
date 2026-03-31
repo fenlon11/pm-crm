@@ -4,7 +4,7 @@ import React from 'react';
 import { emailTheme } from 'src/common-style';
 
 type HighlightedContainerProps = {
-  children: JSX.Element | JSX.Element[] | string;
+  children: JSX.Element | JSX.Element[] | string | null | (JSX.Element | string | null)[];
 };
 
 const highlightedContainerStyle = {

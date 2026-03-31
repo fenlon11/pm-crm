@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pm-front",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["nx", "start", "pm-front"],
+      "cwd": "/Users/mattfenlon/pmOS/projects/persistent-momentum/pm-crm",
+      "port": 3001
+    },
+    {
+      "name": "pm-server",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["nx", "start", "pm-server"],
+      "cwd": "/Users/mattfenlon/pmOS/projects/persistent-momentum/pm-crm",
+      "port": 3000
+    }
+  ]
+}

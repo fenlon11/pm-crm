@@ -17,8 +17,7 @@ export const RESERVED_METADATA_NAME_KEYWORDS = [
   'billingSubscriptionItems',
   'featureFlag',
   'featureFlags',
-  'job',
-  'jobs',
+
   'keyValuePair',
   'keyValuePairs',
   'pageLayout',
