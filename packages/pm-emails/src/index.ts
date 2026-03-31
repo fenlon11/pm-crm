@@ -1,4 +1,5 @@
 export type { JSONContent } from '@tiptap/core';
+export * from './emails/application-received.email';
 export * from './emails/candidate-application-received.email';
 export * from './emails/candidate-interview-scheduled.email';
 export * from './emails/candidate-offer-extended.email';

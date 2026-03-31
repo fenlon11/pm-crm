@@ -148,8 +148,6 @@ export class RecruiterPublicService {
             targetCandidateId: newCandidateId,
             targetJobId: jobId,
             properties: { source: 'public_apply' } as any,
-            createdBy: { source: 'MANUAL', name: 'Public Application' } as any,
-            updatedBy: { source: 'MANUAL', name: 'Public Application' } as any,
           },
         ],
         undefined,

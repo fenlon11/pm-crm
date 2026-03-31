@@ -1,4 +1,4 @@
-import { REACT_APP_SERVER_BASE_URL } from '@/config';
+import { REACT_APP_SERVER_BASE_URL } from '~/config';
 import { getBrandConfig } from 'pm-shared/brand';
 import { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
