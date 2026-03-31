@@ -1,0 +1,25 @@
+# Nx build cache — environment-specific, causes 45-min extraction timeout on Vercel
+.nx/
+
+# Backend — not needed for pm-front build
+packages/pm-server/
+
+# Docs & website — not needed for pm-front build
+packages/twenty-website-new/
+packages/twenty-docs/
+
+# Tooling packages not in pm-front dependency graph
+packages/twenty-companion/
+packages/create-twenty-app/
+packages/pm-emails/
+packages/twenty-apps/
+packages/pm-e2e-testing/
+packages/twenty-docker/
+packages/twenty-oxlint-rules/
+packages/twenty-cli/
+packages/twenty-zapier/
+
+# Build output dirs (in case they exist locally)
+packages/*/dist/
+packages/*/build/
+packages/*/.next/
