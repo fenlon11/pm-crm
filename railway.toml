@@ -1,0 +1,5 @@
+[build]
+buildCommand = "npm i -g corepack@latest && corepack enable && corepack prepare --activate && YARN_ENABLE_HARDENED_MODE=0 yarn install && npx nx build pm-server"
+
+[deploy]
+startCommand = "cd packages/pm-server && node dist/main"
