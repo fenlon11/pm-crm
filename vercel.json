@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx nx build pm-front",
+  "buildCommand": "npx nx build pm-front && (cd packages/pm-front && bash scripts/inject-runtime-env.sh)",
   "outputDirectory": "packages/pm-front/build",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
