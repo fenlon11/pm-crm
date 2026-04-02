@@ -2,4 +2,4 @@
 buildCommand = "npm i -g corepack@latest && corepack enable && corepack prepare --activate && YARN_ENABLE_HARDENED_MODE=0 yarn install && npx nx build pm-server"
 
 [deploy]
-startCommand = "cd packages/pm-server && node dist/command/command.js cache:flush && node dist/main"
+startCommand = "cd packages/pm-server && node dist/command/command.js cache:flush && node dist/command/command.js cache:flat-cache-invalidate --all-metadata && node dist/main"
