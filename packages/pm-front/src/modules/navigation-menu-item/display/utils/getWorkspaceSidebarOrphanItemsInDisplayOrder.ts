@@ -1,13 +1,23 @@
-import { NavigationMenuItemType } from 'pm-shared/types';
+import { CoreObjectNameSingular, NavigationMenuItemType } from 'pm-shared/types';
 import { isDefined } from 'pm-shared/utils';
 import { type NavigationMenuItem } from '~/generated-metadata/graphql';
 
-import { FOLDER_ICON_DEFAULT } from '@/navigation-menu-item/common/constants/FolderIconDefault';
 import { isNavigationMenuItemFolder } from '@/navigation-menu-item/common/utils/isNavigationMenuItemFolder';
 import { getObjectMetadataForNavigationMenuItem } from '@/navigation-menu-item/display/object/utils/getObjectMetadataForNavigationMenuItem';
 import { type EnrichedObjectMetadataItem } from '@/object-metadata/types/EnrichedObjectMetadataItem';
 import { getObjectPermissionsForObject } from '@/object-metadata/utils/getObjectPermissionsForObject';
 import { type ViewWithRelations } from '@/views/types/ViewWithRelations';
+
+// Persistent Recruiter: these legacy Twenty objects exist in metadata but
+// must never appear in the sidebar. Deactivating them via metadata breaks
+// the auth cache rebuild, so we hide them in the frontend only.
+const PR_SIDEBAR_HIDDEN_OBJECTS = new Set<string>([
+  CoreObjectNameSingular.Person,
+  CoreObjectNameSingular.Opportunity,
+  CoreObjectNameSingular.Task,
+  CoreObjectNameSingular.Note,
+  CoreObjectNameSingular.Dashboard,
+]);
 
 type GetWorkspaceSidebarOrphanItemsInDisplayOrderArgs = {
   workspaceNavigationMenuItems: NavigationMenuItem[];
@@ -36,10 +46,11 @@ export const getWorkspaceSidebarOrphanItemsInDisplayOrder = ({
 
   return flatWorkspaceItems.reduce<NavigationMenuItem[]>((acc, item) => {
     if (isNavigationMenuItemFolder(item)) {
-      acc.push({
-        ...item,
-        icon: item.icon ?? FOLDER_ICON_DEFAULT,
-      });
+      // Persistent Recruiter doesn't use nav folders — skip them so their
+      // contents don't appear as parent-child entries in the sidebar.
+      // Children (which have folderId set) are already excluded from
+      // flatWorkspaceItems, so they disappear automatically.
+      return acc;
     } else {
       const validItem = processedItemsById.get(item.id);
       if (!isDefined(validItem)) {
@@ -55,6 +66,7 @@ export const getWorkspaceSidebarOrphanItemsInDisplayOrder = ({
         );
         if (
           isDefined(objectMetadataItem) &&
+          !PR_SIDEBAR_HIDDEN_OBJECTS.has(objectMetadataItem.nameSingular) &&
           getObjectPermissionsForObject(
             objectPermissionsByObjectMetadataId,
             objectMetadataItem.id,
