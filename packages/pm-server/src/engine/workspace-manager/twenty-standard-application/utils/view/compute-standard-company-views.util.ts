@@ -1,4 +1,4 @@
-import { ViewType, ViewKey } from 'pm-shared/types';
+import { AggregateOperations, ViewType, ViewKey } from 'pm-shared/types';
 
 import { type FlatView } from 'src/engine/metadata-modules/flat-view/types/flat-view.type';
 
@@ -21,6 +21,21 @@ export const computeStandardCompanyViews = (
         key: ViewKey.INDEX,
         position: 0,
         icon: 'IconList',
+      },
+    }),
+    byStage: createStandardViewFlatMetadata({
+      ...args,
+      objectName: 'company',
+      context: {
+        viewName: 'byStage',
+        name: 'Pipeline',
+        type: ViewType.KANBAN,
+        key: null,
+        position: 1,
+        icon: 'IconLayoutKanban',
+        mainGroupByFieldName: 'stage',
+        kanbanAggregateOperation: AggregateOperations.COUNT,
+        kanbanAggregateOperationFieldName: 'stage',
       },
     }),
     companyRecordPageFields: createStandardViewFlatMetadata({
