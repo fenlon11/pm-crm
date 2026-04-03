@@ -2,17 +2,14 @@ import { useLingui } from '@lingui/react/macro';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { SettingsPath } from 'pm-shared/types';
 import { getSettingsPath } from 'pm-shared/utils';
-import { IconHelpCircle, IconSettings } from 'pm-ui/display';
+import { IconSettings } from 'pm-ui/display';
 import { AnimatedExpandableContainer } from 'pm-ui/layout';
 
-import { currentWorkspaceMemberState } from '@/auth/states/currentWorkspaceMemberState';
 import { useOpenSettingsMenu } from '@/navigation/hooks/useOpenSettings';
-import { getDocumentationUrl } from '@/support/utils/getDocumentationUrl';
 import { isNavigationDrawerExpandedState } from '@/ui/navigation/states/isNavigationDrawerExpanded';
 import { navigationDrawerExpandedMemorizedState } from '@/ui/navigation/states/navigationDrawerExpandedMemorizedState';
 import { navigationMemorizedUrlState } from '@/ui/navigation/states/navigationMemorizedUrlState';
 import { useAtomState } from '@/ui/utilities/state/jotai/hooks/useAtomState';
-import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomStateValue';
 import { useSetAtomState } from '@/ui/utilities/state/jotai/hooks/useSetAtomState';
 
 import { NavigationDrawerAnimatedCollapseWrapper } from '@/ui/navigation/navigation-drawer/components/NavigationDrawerAnimatedCollapseWrapper';
@@ -27,7 +24,6 @@ export const NavigationDrawerOtherSection = () => {
   const { t } = useLingui();
   const location = useLocation();
   const navigate = useNavigate();
-  const currentWorkspaceMember = useAtomStateValue(currentWorkspaceMemberState);
   const [isNavigationDrawerExpanded, setIsNavigationDrawerExpanded] =
     useAtomState(isNavigationDrawerExpandedState);
   const setNavigationDrawerExpandedMemorized = useSetAtomState(
@@ -73,13 +69,6 @@ export const NavigationDrawerOtherSection = () => {
           label={t`Settings`}
           Icon={IconSettings}
           onClick={handleSettingsClick}
-        />
-        <NavigationDrawerItem
-          label={t`Documentation`}
-          to={getDocumentationUrl({
-            locale: currentWorkspaceMember?.locale,
-          })}
-          Icon={IconHelpCircle}
         />
       </AnimatedExpandableContainer>
     </NavigationDrawerSection>

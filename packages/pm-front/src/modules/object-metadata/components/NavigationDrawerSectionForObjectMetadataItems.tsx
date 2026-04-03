@@ -11,9 +11,21 @@ import { isNavigationSectionOpenFamilyState } from '@/ui/navigation/navigation-d
 import { useAtomFamilyStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomFamilyStateValue';
 import { isDefined } from 'pm-shared/utils';
 
+// Persistent Recruiter sidebar order for the layout customization editor.
+// Custom objects (candidate, job, etc.) are coerced into this ordering by
+// being listed here alongside standard objects.
 const ORDERED_FIRST_STANDARD_OBJECTS: string[] = [
-  CoreObjectNameSingular.Person,
+  'candidate',
   CoreObjectNameSingular.Company,
+  'job',
+  'application',
+  'form',
+  'video',
+  'page',
+  CoreObjectNameSingular.Workflow,
+  // Legacy Twenty defaults — deactivated in this workspace but kept so they
+  // sort deterministically if ever re-enabled.
+  CoreObjectNameSingular.Person,
   CoreObjectNameSingular.Opportunity,
   CoreObjectNameSingular.Task,
   CoreObjectNameSingular.Note,
