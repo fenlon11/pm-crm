@@ -740,6 +740,9 @@ export const STANDARD_OBJECTS = {
       jobs: {
         universalIdentifier: '20202020-c0c2-4002-8002-ca0000000001',
       },
+      stage: {
+        universalIdentifier: '20202020-c0f0-40f0-80f0-c0aba11c0001',
+      },
     },
     indexes: {
       accountOwnerIdIndex: {
@@ -853,6 +856,27 @@ export const STANDARD_OBJECTS = {
           timelineActivities: {
             universalIdentifier: '20202020-af01-4a01-8a01-c0aba11c121a',
           },
+        },
+      },
+      byStage: {
+        universalIdentifier: '20202020-c050-4050-8050-c0aba11c0001',
+        viewFields: {
+          name: { universalIdentifier: '20202020-c051-4051-8051-c0aba11c0001' },
+          stage: { universalIdentifier: '20202020-c052-4052-8052-c0aba11c0001' },
+          domainName: { universalIdentifier: '20202020-c053-4053-8053-c0aba11c0001' },
+          createdAt: { universalIdentifier: '20202020-c054-4054-8054-c0aba11c0001' },
+        },
+        viewGroups: {
+          new: { universalIdentifier: '20202020-c060-4060-8060-c0aba11c0001' },
+          attemptedContact: { universalIdentifier: '20202020-c061-4061-8061-c0aba11c0001' },
+          contacted: { universalIdentifier: '20202020-c062-4062-8062-c0aba11c0001' },
+          appointmentSet: { universalIdentifier: '20202020-c063-4063-8063-c0aba11c0001' },
+          appointmentMet: { universalIdentifier: '20202020-c064-4064-8064-c0aba11c0001' },
+          activeFollowUp: { universalIdentifier: '20202020-c065-4065-8065-c0aba11c0001' },
+          signed: { universalIdentifier: '20202020-c066-4066-8066-c0aba11c0001' },
+          onboarding: { universalIdentifier: '20202020-c067-4067-8067-c0aba11c0001' },
+          nurture: { universalIdentifier: '20202020-c068-4068-8068-c0aba11c0001' },
+          archive: { universalIdentifier: '20202020-c069-4069-8069-c0aba11c0001' },
         },
       },
     },

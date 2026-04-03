@@ -4,8 +4,8 @@ import { NavigationMenuItemType } from 'src/engine/metadata-modules/navigation-m
 
 export const STANDARD_NAVIGATION_MENU_ITEMS = {
   // Persistent Recruiter sidebar order:
-  // 1. Candidates, 2. Company, 3. Jobs, 4. Workflows folder, [custom objects interleaved via DB]
-  // Pipeline / Inbox / Reports are frontend placeholders, not CRM objects
+  // 1. Candidates, 2. Pipeline (folder), 3. Company, 4. Jobs, 5. Workflows folder
+  // Inbox / Reports are frontend placeholders (PRComingSoonNavSection)
   allCandidates: {
     universalIdentifier: '20202020-b00b-4b0b-8b0b-c0aba11c000b',
     type: NavigationMenuItemType.OBJECT,
@@ -13,26 +13,49 @@ export const STANDARD_NAVIGATION_MENU_ITEMS = {
       STANDARD_OBJECTS.candidate.views.allCandidates.universalIdentifier,
     position: 0,
   },
+  pipelineFolder: {
+    universalIdentifier: '20202020-b00d-4b0d-8b0d-c0aba11c000d',
+    type: NavigationMenuItemType.FOLDER,
+    name: 'Pipeline',
+    icon: 'IconLayoutKanban',
+    position: 1,
+  },
+  pipelineFolderCandidates: {
+    universalIdentifier: '20202020-b00e-4b0e-8b0e-c0aba11c000e',
+    type: NavigationMenuItemType.OBJECT,
+    viewUniversalIdentifier:
+      STANDARD_OBJECTS.candidate.views.byStatus.universalIdentifier,
+    folderUniversalIdentifier: '20202020-b00d-4b0d-8b0d-c0aba11c000d',
+    position: 0,
+  },
+  pipelineFolderCompanies: {
+    universalIdentifier: '20202020-b00f-4b0f-8b0f-c0aba11c000f',
+    type: NavigationMenuItemType.OBJECT,
+    viewUniversalIdentifier:
+      STANDARD_OBJECTS.company.views.byStage.universalIdentifier,
+    folderUniversalIdentifier: '20202020-b00d-4b0d-8b0d-c0aba11c000d',
+    position: 1,
+  },
   allCompanies: {
     universalIdentifier: '20202020-b001-4b01-8b01-c0aba11c0001',
     type: NavigationMenuItemType.OBJECT,
     viewUniversalIdentifier:
       STANDARD_OBJECTS.company.views.allCompanies.universalIdentifier,
-    position: 1,
+    position: 2,
   },
   allJobs: {
     universalIdentifier: '20202020-b00c-4b0c-8b0c-c0aba11c000c',
     type: NavigationMenuItemType.OBJECT,
     viewUniversalIdentifier:
       STANDARD_OBJECTS.job.views.allJobs.universalIdentifier,
-    position: 2,
+    position: 3,
   },
   workflowsFolder: {
     universalIdentifier: '20202020-b007-4b07-8b07-c0aba11c0007',
     type: NavigationMenuItemType.FOLDER,
     name: 'Workflows',
     icon: 'IconSettingsAutomation',
-    position: 3,
+    position: 4,
   },
   workflowsFolderAllWorkflows: {
     universalIdentifier: '20202020-b008-4b08-8b08-c0aba11c0008',
