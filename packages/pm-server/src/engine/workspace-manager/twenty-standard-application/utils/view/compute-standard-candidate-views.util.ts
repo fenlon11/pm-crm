@@ -28,7 +28,7 @@ export const computeStandardCandidateViews = (
       objectName: 'candidate',
       context: {
         viewName: 'byStatus',
-        name: 'Pipeline',
+        name: 'Candidate Pipeline',
         type: ViewType.KANBAN,
         key: null,
         position: 1,

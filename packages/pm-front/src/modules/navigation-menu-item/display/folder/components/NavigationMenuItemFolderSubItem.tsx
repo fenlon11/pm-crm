@@ -91,14 +91,7 @@ export const NavigationMenuItemFolderSubItem = ({
 
   return (
     <NavigationDrawerSubItem
-      secondaryLabel={
-        navigationMenuItem.type !== NavigationMenuItemType.VIEW
-          ? undefined
-          : getObjectNavigationMenuItemSecondaryLabel({
-              objectMetadataItems,
-              navigationMenuItemObjectNameSingular: objectNameSingular ?? '',
-            })
-      }
+      secondaryLabel={undefined}
       label={label}
       Icon={() => (
         <NavigationMenuItemIcon navigationMenuItem={navigationMenuItem} />

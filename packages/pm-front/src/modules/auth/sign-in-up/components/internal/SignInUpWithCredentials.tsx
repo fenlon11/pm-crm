@@ -25,11 +25,35 @@ import { MainButton } from 'pm-ui/input';
 import { useAtomState } from '@/ui/utilities/state/jotai/hooks/useAtomState';
 import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomStateValue';
 
+const KEEP_SIGNED_IN_KEY = 'pr_keep_signed_in';
+
 const StyledForm = styled.form`
   align-items: center;
   display: flex;
   flex-direction: column;
   width: 100%;
+`;
+
+const StyledKeepSignedInContainer = styled.div`
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+`;
+
+const StyledKeepSignedInCheckbox = styled.input`
+  accent-color: #3b82f6;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+`;
+
+const StyledKeepSignedInLabel = styled.label`
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 13px;
+  user-select: none;
 `;
 
 export const SignInUpWithCredentials = ({
@@ -42,6 +66,9 @@ export const SignInUpWithCredentials = ({
 
   const [signInUpStep, setSignInUpStep] = useAtomState(signInUpStepState);
   const [showErrors, setShowErrors] = useState(false);
+  const [keepSignedIn, setKeepSignedIn] = useState(
+    () => localStorage.getItem(KEEP_SIGNED_IN_KEY) !== 'false',
+  );
   const captcha = useAtomStateValue(captchaState);
   const isRequestingCaptchaToken = useAtomStateValue(
     isRequestingCaptchaTokenState,
@@ -79,6 +106,7 @@ export const SignInUpWithCredentials = ({
     } else if (signInUpStep === SignInUpStep.Password) {
       if (!form.formState.isSubmitting) {
         setShowErrors(true);
+        localStorage.setItem(KEEP_SIGNED_IN_KEY, keepSignedIn ? 'true' : 'false');
         form.handleSubmit(submitCredentials)();
       }
     }
@@ -151,6 +179,20 @@ export const SignInUpWithCredentials = ({
               signInUpMode={signInUpMode}
             />
           )}
+          {signInUpStep === SignInUpStep.Password &&
+            signInUpMode === SignInUpMode.SignIn && (
+              <StyledKeepSignedInContainer>
+                <StyledKeepSignedInCheckbox
+                  type="checkbox"
+                  id="keep-signed-in"
+                  checked={keepSignedIn}
+                  onChange={(e) => setKeepSignedIn(e.target.checked)}
+                />
+                <StyledKeepSignedInLabel htmlFor="keep-signed-in">
+                  {t`Keep me signed in`}
+                </StyledKeepSignedInLabel>
+              </StyledKeepSignedInContainer>
+            )}
           <StyledSSOButtonContainer>
             <MainButton
               title={buttonTitle}

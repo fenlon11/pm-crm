@@ -37,7 +37,6 @@ export const RecordTableEmptyStateNoGroupNoRecordAtAll = () => {
       subTitle={subTitle}
       title={title}
       ButtonIcon={IconPlus}
-      animatedPlaceholderType="noRecord"
       onClick={handleButtonClick}
     />
   );

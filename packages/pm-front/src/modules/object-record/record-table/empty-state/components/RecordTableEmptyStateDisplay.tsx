@@ -36,7 +36,7 @@ type RecordTableEmptyStateDisplayButtonProps = {
 };
 
 type RecordTableEmptyStateDisplayProps = {
-  animatedPlaceholderType: AnimatedPlaceholderType;
+  animatedPlaceholderType?: AnimatedPlaceholderType;
   title: string;
   subTitle: string;
 } & (
@@ -72,7 +72,9 @@ export const RecordTableEmptyStateDisplay = (
   return (
     <StyledEmptyPlaceholderOuterContainer>
       <AnimatedPlaceholderEmptyContainer width={scrollWrapperWidth}>
-        <AnimatedPlaceholder type={props.animatedPlaceholderType} />
+        {props.animatedPlaceholderType !== undefined && (
+          <AnimatedPlaceholder type={props.animatedPlaceholderType} />
+        )}
         <AnimatedPlaceholderEmptyTextContainer>
           <AnimatedPlaceholderEmptyTitle>
             {props.title}
