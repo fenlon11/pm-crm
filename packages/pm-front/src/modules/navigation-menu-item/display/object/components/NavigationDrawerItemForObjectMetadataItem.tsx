@@ -107,11 +107,18 @@ export const NavigationDrawerItemForObjectMetadataItem = ({
     ? getNavigationMenuItemLabel(navigationMenuItem, objectMetadataItems, views)
     : objectMetadataItem.labelPlural;
 
+  // Persistent Recruiter brand spec: Company displays as singular ("Company")
+  // rather than plural ("Companies") in the sidebar nav.
+  const basePlural =
+    objectMetadataItem.nameSingular === CoreObjectNameSingular.Company
+      ? objectMetadataItem.labelSingular
+      : objectMetadataItem.labelPlural;
+
   const label = isRecord
     ? itemLabel
     : isViewWithResolvedView
       ? itemLabel
-      : objectMetadataItem.labelPlural;
+      : basePlural;
 
   const recordIdentifier =
     isRecord && isDefined(navigationMenuItem?.targetRecordIdentifier)
