@@ -8,15 +8,29 @@ import { type EnrichedObjectMetadataItem } from '@/object-metadata/types/Enriche
 import { getObjectPermissionsForObject } from '@/object-metadata/utils/getObjectPermissionsForObject';
 import { type ViewWithRelations } from '@/views/types/ViewWithRelations';
 
-// Persistent Recruiter: these legacy Twenty objects exist in metadata but
-// must never appear in the sidebar. Deactivating them via metadata breaks
-// the auth cache rebuild, so we hide them in the frontend only.
+// Persistent Recruiter: objects that must never appear in the sidebar.
+// Using a frontend filter (not metadata deactivation) to avoid breaking the
+// auth cache rebuild. Keep visible: candidate, company, job, task, opportunity
+// (rendered as the Pipeline view).
 const PR_SIDEBAR_HIDDEN_OBJECTS = new Set<string>([
+  // Standard Twenty objects not relevant to recruiting
   CoreObjectNameSingular.Person,
-  CoreObjectNameSingular.Opportunity,
-  CoreObjectNameSingular.Task,
   CoreObjectNameSingular.Note,
   CoreObjectNameSingular.Dashboard,
+  // Workflow plumbing — visible via Settings, not the main nav
+  CoreObjectNameSingular.Workflow,
+  CoreObjectNameSingular.WorkflowVersion,
+  CoreObjectNameSingular.WorkflowRun,
+  // Custom objects managed via Settings or record detail, not main nav
+  'form',
+  'page',
+  'video',
+  'application',
+  // Demo objects (not currently in DB, but blocked defensively)
+  'pet',
+  'petCareAgreement',
+  'rocket',
+  'surveyResult',
 ]);
 
 type GetWorkspaceSidebarOrphanItemsInDisplayOrderArgs = {
