@@ -538,4 +538,26 @@ export const buildJobStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
+  videos: createStandardRelationFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      type: FieldMetadataType.RELATION,
+      morphId: null,
+      fieldName: 'videos',
+      label: i18nLabel(msg`Videos`),
+      description: i18nLabel(msg`Video intros submitted for this job`),
+      icon: 'IconVideo',
+      isNullable: true,
+      targetObjectName: 'video',
+      targetFieldName: 'job',
+      settings: {
+        relationType: RelationType.ONE_TO_MANY,
+      },
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
 });

@@ -7,6 +7,7 @@ import { buildAttachmentStandardFlatIndexMetadatas } from 'src/engine/workspace-
 import { buildBlocklistStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-blocklist-standard-flat-index-metadata.util';
 import { buildCandidateStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-candidate-standard-flat-index-metadata.util';
 import { buildJobStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-job-standard-flat-index-metadata.util';
+import { buildVideoStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-video-standard-flat-index-metadata.util';
 import { buildCalendarChannelEventAssociationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-calendar-channel-event-association-standard-flat-index-metadata.util';
 import { buildCalendarChannelStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-calendar-channel-standard-flat-index-metadata.util';
 import { buildCalendarEventParticipantStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-calendar-event-participant-standard-flat-index-metadata.util';
@@ -43,6 +44,7 @@ const STANDARD_FLAT_INDEX_METADATA_BUILDERS_BY_OBJECT_NAME = {
   blocklist: buildBlocklistStandardFlatIndexMetadatas,
   candidate: buildCandidateStandardFlatIndexMetadatas,
   job: buildJobStandardFlatIndexMetadatas,
+  video: buildVideoStandardFlatIndexMetadatas,
   calendarChannelEventAssociation:
     buildCalendarChannelEventAssociationStandardFlatIndexMetadatas,
   calendarChannel: buildCalendarChannelStandardFlatIndexMetadatas,

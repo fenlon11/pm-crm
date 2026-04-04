@@ -674,6 +674,31 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
+  video: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<CreateStandardObjectArgs<'video'>, 'context' | 'objectName'>) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'video',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.video.universalIdentifier,
+        nameSingular: 'video',
+        namePlural: 'videos',
+        labelSingular: i18nLabel(msg`Video`),
+        labelPlural: i18nLabel(msg`Videos`),
+        description: i18nLabel(msg`A candidate video intro`),
+        icon: 'IconVideo',
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
   person: ({
     now,
     workspaceId,

@@ -27,6 +27,7 @@ import { computeStandardNoteTargetViews } from 'src/engine/workspace-manager/twe
 import { computeStandardNoteViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-note-views.util';
 import { computeStandardCandidateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-candidate-views.util';
 import { computeStandardJobViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-job-views.util';
+import { computeStandardVideoViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-video-views.util';
 import { computeStandardOpportunityViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-opportunity-views.util';
 import { computeStandardPersonViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-person-views.util';
 import { computeStandardTaskTargetViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-task-target-views.util';
@@ -54,6 +55,7 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   candidate: computeStandardCandidateViews,
   company: computeStandardCompanyViews,
   job: computeStandardJobViews,
+  video: computeStandardVideoViews,
   connectedAccount: computeStandardConnectedAccountViews,
   dashboard: computeStandardDashboardViews,
   favorite: computeStandardFavoriteViews,
