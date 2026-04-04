@@ -1157,10 +1157,10 @@ msgstr "Lisää pienoisohjelma"
 msgid "Add Widget"
 msgstr "Lisää widget"
 
-#. js-lingui-id: m2qDV8
-#: src/modules/object-record/record-table/empty-state/utils/getEmptyStateTitle.ts
-msgid "Add your first {objectLabel}"
-msgstr "Lisää ensimmäinen {objectLabel}"
+#. js-lingui-id: Mwc2Po
+#: src/modules/object-record/record-table/empty-state/utils/getEmptyStateSubTitle.ts
+msgid "Add your first {objectLabel} to get started."
+msgstr ""
 
 #. js-lingui-id: vLO+NG
 #: src/modules/ui/layout/show-page/components/ShowPageSummaryCard.tsx
@@ -2520,10 +2520,10 @@ msgstr ""
 msgid "by {author}"
 msgstr "tekijä: {author}"
 
-#. js-lingui-id: 8Pfllj
+#. js-lingui-id: BDYwag
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
-msgid "By using Twenty, you agree to the"
-msgstr "Twenty:tä käyttäessäsi hyväksyt"
+msgid "By using Persistent Recruiter, you agree to the"
+msgstr ""
 
 #. js-lingui-id: Yx41df
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
@@ -2855,10 +2855,10 @@ msgstr "Tarkista sähköpostisi"
 msgid "Check your inbox to verify your new email address."
 msgstr "Tarkista postilaatikkosi vahvistaaksesi uuden sähköpostiosoitteesi."
 
-#. js-lingui-id: SxwQE8
+#. js-lingui-id: qr4S4Y
 #: src/modules/settings/billing/hooks/useHandleCheckoutSession.ts
-msgid "Checkout session error. Please retry or contact Twenty team"
-msgstr "Tarkista istunnovirhe. Yritä uudelleen tai ota yhteyttä Twenty-tiimiin"
+msgid "Checkout session error. Please retry or contact support."
+msgstr ""
 
 #. js-lingui-id: SviKkE
 #: src/pages/settings/profile/appearance/components/LocalePicker.tsx
@@ -3962,6 +3962,11 @@ msgstr "Käytetyt krediitit"
 msgid "Crimson"
 msgstr "Karmiininpunainen"
 
+#. js-lingui-id: sk+eeK
+#: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
+msgid "CRM fields"
+msgstr ""
+
 #. js-lingui-id: 6Oaeoc
 #: src/modules/settings/logic-functions/components/tabs/SettingsLogicFunctionTriggersTab.tsx
 msgid "Cron"
@@ -4898,7 +4903,6 @@ msgstr "Älä tuo"
 #: src/pages/settings/workspace/SettingsApiWebhooks.tsx
 #: src/pages/settings/developers/api-keys/SettingsApiKeys.tsx
 #: src/modules/settings/hooks/useSettingsNavigationItems.tsx
-#: src/modules/navigation/components/NavigationDrawerOtherSection.tsx
 msgid "Documentation"
 msgstr "Dokumentaatio"
 
@@ -5983,10 +5987,10 @@ msgstr "Virhe mitatun tason peruutuksessa."
 msgid "Error while cancelling plan switching."
 msgstr "Virhe suunnitelman peruutuksessa."
 
-#. js-lingui-id: QmR+2U
+#. js-lingui-id: vWUy5k
 #: src/modules/settings/billing/hooks/useEndSubscriptionTrialPeriod.ts
-msgid "Error while ending trial period. Please contact Twenty team."
-msgstr "Virhe kokeilujakson päättämisessä. Ota yhteyttä Twenty -tiimiin."
+msgid "Error while ending trial period. Please contact support."
+msgstr ""
 
 #. js-lingui-id: 5g78zo
 #: src/pages/settings/members/SettingsWorkspaceMember.tsx
@@ -7741,6 +7745,7 @@ msgid "Inactive Skill Options"
 msgstr "Passiivisen taidon valinnat"
 
 #. js-lingui-id: Gp4Yi6
+#: src/modules/navigation/components/PRComingSoonNavSection.tsx
 #: src/modules/activities/emails/components/EmailsCard.tsx
 msgid "Inbox"
 msgstr "Saapuneet"
@@ -8250,6 +8255,11 @@ msgstr ""
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownLayoutContent.tsx
 msgid "Kanban"
 msgstr "Kanban"
+
+#. js-lingui-id: hvsP1d
+#: src/modules/auth/sign-in-up/components/internal/SignInUpWithCredentials.tsx
+msgid "Keep me signed in"
+msgstr ""
 
 #. js-lingui-id: 7sMeHQ
 #: src/modules/workflow/workflow-steps/workflow-actions/http-request-action/components/KeyValuePairInput.tsx
@@ -9686,6 +9696,11 @@ msgstr "Ei {fieldLabel}"
 msgid "No {label}"
 msgstr "Ei {label}"
 
+#. js-lingui-id: AVIT9s
+#: src/modules/object-record/record-table/empty-state/utils/getEmptyStateTitle.ts
+msgid "No {objectLabel} yet"
+msgstr ""
+
 #. js-lingui-id: 9CpMvJ
 #: src/modules/object-record/record-table/empty-state/components/RecordTableEmptyStateNoRecordFoundForFilter.tsx
 msgid "No {objectLabelSingular} found"
@@ -10802,10 +10817,10 @@ msgstr "sivun asettelun widget"
 msgid "Page Name"
 msgstr "Sivun nimi"
 
-#. js-lingui-id: NRvxzv
+#. js-lingui-id: r0pMkf
 #: src/pages/not-found/NotFound.tsx
-msgid "Page Not Found | Twenty"
-msgstr "Sivua ei löydy | Twenty"
+msgid "Page Not Found | Persistent Recruiter"
+msgstr ""
 
 #. js-lingui-id: sF+Xp9
 #: src/pages/settings/security/event-logs/components/EventLogTableSelector.tsx
@@ -11490,10 +11505,10 @@ msgstr "Lue dokumentaatio"
 msgid "Read your profile"
 msgstr "Lue profiilisi"
 
-#. js-lingui-id: tCXcL7
+#. js-lingui-id: NgI9RC
 #: src/pages/settings/ai/SettingsAIPrompts.tsx
-msgid "Read-only — managed by Twenty"
-msgstr "Vain luku — Twenty hallinnoi"
+msgid "Read-only — managed by Persistent Recruiter"
+msgstr ""
 
 #. js-lingui-id: W+ApAD
 #: src/modules/workflow/workflow-steps/workflow-actions/components/WorkflowEditActionEmailBase.tsx
@@ -11880,6 +11895,11 @@ msgstr "Vastaa"
 #: src/modules/activities/emails/components/EmailThreadBottomBar.tsx
 msgid "Reply to all"
 msgstr "Vastaa kaikille"
+
+#. js-lingui-id: t9yxlZ
+#: src/modules/navigation/components/PRComingSoonNavSection.tsx
+msgid "Reports"
+msgstr ""
 
 #. js-lingui-id: /laZGZ
 #: src/modules/workflow/workflow-steps/workflow-actions/http-request-action/components/HttpRequestExecutionResult.tsx
@@ -13786,10 +13806,10 @@ msgstr "Synkronoi Googlen kanssa"
 msgid "Sync with Outlook"
 msgstr "Synkronoi Outlookin kanssa"
 
-#. js-lingui-id: +9x4tK
+#. js-lingui-id: nSZO1l
 #: src/pages/onboarding/SyncEmails.tsx
-msgid "Sync your Emails and Calendar with Twenty. Choose your privacy settings."
-msgstr "Synkronoi sähköpostisi ja kalenterisi Twentyyn. Valitse tietosuoja-asetuksesi."
+msgid "Sync your Emails and Calendar with Persistent Recruiter. Choose your privacy settings."
+msgstr ""
 
 #. js-lingui-id: N2FcBE
 #: src/modules/settings/accounts/components/SettingsAccountsConnectedAccountsRowRightContainer.tsx
@@ -14705,11 +14725,6 @@ msgstr ""
 msgid "Turquoise"
 msgstr "Turkoosi"
 
-#. js-lingui-id: JnaRPe
-#: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
-msgid "Twenty fields"
-msgstr "Twenty-kentät"
-
 #. js-lingui-id: YIjS4q
 #: src/pages/settings/ai/components/SettingsAgentModelCapabilities.tsx
 msgid "Twitter/X Search"
@@ -15212,11 +15227,6 @@ msgstr ""
 #: src/modules/settings/domains/utils/getSubdomainValidationSchema.ts
 msgid "Use letter, number and dash only. Start and finish with a letter or a number"
 msgstr "Käytä vain kirjaimia, numeroita ja väliviivaa. Aloita ja lopeta kirjaimella tai numerolla"
-
-#. js-lingui-id: c6uZUV
-#: src/modules/object-record/record-table/empty-state/utils/getEmptyStateSubTitle.ts
-msgid "Use our API or add your first {objectLabel} manually"
-msgstr "Käytä APIamme tai lisää ensimmäinen {objectLabel} käsin"
 
 #. js-lingui-id: 664z2C
 #: src/pages/settings/ai/components/SettingsAIModelsTab.tsx
@@ -15752,10 +15762,10 @@ msgstr ""
 msgid "Weight"
 msgstr ""
 
-#. js-lingui-id: nTuObL
+#. js-lingui-id: Q7AEyY
 #: src/pages/auth/SignInUp.tsx
-msgid "Welcome to Twenty"
-msgstr "Tervetuloa Twentyyn"
+msgid "Welcome to Persistent Recruiter"
+msgstr ""
 
 #. js-lingui-id: t8ZvkC
 #: src/pages/auth/SignInUp.tsx

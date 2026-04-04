@@ -1157,10 +1157,10 @@ msgstr "Додај виџет"
 msgid "Add Widget"
 msgstr "Додај виџет"
 
-#. js-lingui-id: m2qDV8
-#: src/modules/object-record/record-table/empty-state/utils/getEmptyStateTitle.ts
-msgid "Add your first {objectLabel}"
-msgstr "Додајте свој први {objectLabel}"
+#. js-lingui-id: Mwc2Po
+#: src/modules/object-record/record-table/empty-state/utils/getEmptyStateSubTitle.ts
+msgid "Add your first {objectLabel} to get started."
+msgstr ""
 
 #. js-lingui-id: vLO+NG
 #: src/modules/ui/layout/show-page/components/ShowPageSummaryCard.tsx
@@ -2520,10 +2520,10 @@ msgstr ""
 msgid "by {author}"
 msgstr ""
 
-#. js-lingui-id: 8Pfllj
+#. js-lingui-id: BDYwag
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
-msgid "By using Twenty, you agree to the"
-msgstr "Коришћењем Twenty, слажете се са"
+msgid "By using Persistent Recruiter, you agree to the"
+msgstr ""
 
 #. js-lingui-id: Yx41df
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
@@ -2855,10 +2855,10 @@ msgstr "Проверите имејл пошту"
 msgid "Check your inbox to verify your new email address."
 msgstr "Проверите пријемно сандуче да потврдите своју нову имејл адресу."
 
-#. js-lingui-id: SxwQE8
+#. js-lingui-id: qr4S4Y
 #: src/modules/settings/billing/hooks/useHandleCheckoutSession.ts
-msgid "Checkout session error. Please retry or contact Twenty team"
-msgstr "Грешка у сесији наплате. Молимо да покушате поново или контактирајте Twenty тим"
+msgid "Checkout session error. Please retry or contact support."
+msgstr ""
 
 #. js-lingui-id: SviKkE
 #: src/pages/settings/profile/appearance/components/LocalePicker.tsx
@@ -3962,6 +3962,11 @@ msgstr "Кредити искоришћени"
 msgid "Crimson"
 msgstr "Кримсон"
 
+#. js-lingui-id: sk+eeK
+#: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
+msgid "CRM fields"
+msgstr ""
+
 #. js-lingui-id: 6Oaeoc
 #: src/modules/settings/logic-functions/components/tabs/SettingsLogicFunctionTriggersTab.tsx
 msgid "Cron"
@@ -4898,7 +4903,6 @@ msgstr "Не увози"
 #: src/pages/settings/workspace/SettingsApiWebhooks.tsx
 #: src/pages/settings/developers/api-keys/SettingsApiKeys.tsx
 #: src/modules/settings/hooks/useSettingsNavigationItems.tsx
-#: src/modules/navigation/components/NavigationDrawerOtherSection.tsx
 msgid "Documentation"
 msgstr "Дoкумeнтација"
 
@@ -5983,10 +5987,10 @@ msgstr "Грешка при отказивању промене мерног н�
 msgid "Error while cancelling plan switching."
 msgstr "Грешка при отказивању промене плана."
 
-#. js-lingui-id: QmR+2U
+#. js-lingui-id: vWUy5k
 #: src/modules/settings/billing/hooks/useEndSubscriptionTrialPeriod.ts
-msgid "Error while ending trial period. Please contact Twenty team."
-msgstr "Грешка приликом завршетка пробног периода. Молимо вас контактирајте Twenty тим."
+msgid "Error while ending trial period. Please contact support."
+msgstr ""
 
 #. js-lingui-id: 5g78zo
 #: src/pages/settings/members/SettingsWorkspaceMember.tsx
@@ -7741,6 +7745,7 @@ msgid "Inactive Skill Options"
 msgstr "Опције неактивне вештине"
 
 #. js-lingui-id: Gp4Yi6
+#: src/modules/navigation/components/PRComingSoonNavSection.tsx
 #: src/modules/activities/emails/components/EmailsCard.tsx
 msgid "Inbox"
 msgstr "Пријемно сандуче"
@@ -8250,6 +8255,11 @@ msgstr ""
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownLayoutContent.tsx
 msgid "Kanban"
 msgstr "Канбан"
+
+#. js-lingui-id: hvsP1d
+#: src/modules/auth/sign-in-up/components/internal/SignInUpWithCredentials.tsx
+msgid "Keep me signed in"
+msgstr ""
 
 #. js-lingui-id: 7sMeHQ
 #: src/modules/workflow/workflow-steps/workflow-actions/http-request-action/components/KeyValuePairInput.tsx
@@ -9686,6 +9696,11 @@ msgstr "Нема {fieldLabel}"
 msgid "No {label}"
 msgstr "Нема {label}"
 
+#. js-lingui-id: AVIT9s
+#: src/modules/object-record/record-table/empty-state/utils/getEmptyStateTitle.ts
+msgid "No {objectLabel} yet"
+msgstr ""
+
 #. js-lingui-id: 9CpMvJ
 #: src/modules/object-record/record-table/empty-state/components/RecordTableEmptyStateNoRecordFoundForFilter.tsx
 msgid "No {objectLabelSingular} found"
@@ -10802,10 +10817,10 @@ msgstr "виџет Распоред странице"
 msgid "Page Name"
 msgstr "Назив странице"
 
-#. js-lingui-id: NRvxzv
+#. js-lingui-id: r0pMkf
 #: src/pages/not-found/NotFound.tsx
-msgid "Page Not Found | Twenty"
-msgstr "Страница није пронађена | Twenty"
+msgid "Page Not Found | Persistent Recruiter"
+msgstr ""
 
 #. js-lingui-id: sF+Xp9
 #: src/pages/settings/security/event-logs/components/EventLogTableSelector.tsx
@@ -11490,10 +11505,10 @@ msgstr "Прочитајте документацију"
 msgid "Read your profile"
 msgstr "Читање вашег профила"
 
-#. js-lingui-id: tCXcL7
+#. js-lingui-id: NgI9RC
 #: src/pages/settings/ai/SettingsAIPrompts.tsx
-msgid "Read-only — managed by Twenty"
-msgstr "Само за читање — управља Twenty"
+msgid "Read-only — managed by Persistent Recruiter"
+msgstr ""
 
 #. js-lingui-id: W+ApAD
 #: src/modules/workflow/workflow-steps/workflow-actions/components/WorkflowEditActionEmailBase.tsx
@@ -11880,6 +11895,11 @@ msgstr "Одговори"
 #: src/modules/activities/emails/components/EmailThreadBottomBar.tsx
 msgid "Reply to all"
 msgstr "Одговори свима"
+
+#. js-lingui-id: t9yxlZ
+#: src/modules/navigation/components/PRComingSoonNavSection.tsx
+msgid "Reports"
+msgstr ""
 
 #. js-lingui-id: /laZGZ
 #: src/modules/workflow/workflow-steps/workflow-actions/http-request-action/components/HttpRequestExecutionResult.tsx
@@ -13786,10 +13806,10 @@ msgstr "Синхронизујте са Google-ом"
 msgid "Sync with Outlook"
 msgstr "Синхронизујте са Outlook-ом"
 
-#. js-lingui-id: +9x4tK
+#. js-lingui-id: nSZO1l
 #: src/pages/onboarding/SyncEmails.tsx
-msgid "Sync your Emails and Calendar with Twenty. Choose your privacy settings."
-msgstr "Синхронизујте своје имејлове и календар са Twenty. Изаберите ваша подешавања приватности."
+msgid "Sync your Emails and Calendar with Persistent Recruiter. Choose your privacy settings."
+msgstr ""
 
 #. js-lingui-id: N2FcBE
 #: src/modules/settings/accounts/components/SettingsAccountsConnectedAccountsRowRightContainer.tsx
@@ -14705,11 +14725,6 @@ msgstr ""
 msgid "Turquoise"
 msgstr "Тиркиз"
 
-#. js-lingui-id: JnaRPe
-#: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
-msgid "Twenty fields"
-msgstr "Twenty поља"
-
 #. js-lingui-id: YIjS4q
 #: src/pages/settings/ai/components/SettingsAgentModelCapabilities.tsx
 msgid "Twitter/X Search"
@@ -15212,11 +15227,6 @@ msgstr ""
 #: src/modules/settings/domains/utils/getSubdomainValidationSchema.ts
 msgid "Use letter, number and dash only. Start and finish with a letter or a number"
 msgstr "Користите само слова, бројеве и цртицу. Мора да почиње и завршава се словом или бројем"
-
-#. js-lingui-id: c6uZUV
-#: src/modules/object-record/record-table/empty-state/utils/getEmptyStateSubTitle.ts
-msgid "Use our API or add your first {objectLabel} manually"
-msgstr "Користите наш API или ручно додајте први {objectLabel}"
 
 #. js-lingui-id: 664z2C
 #: src/pages/settings/ai/components/SettingsAIModelsTab.tsx
@@ -15752,10 +15762,10 @@ msgstr ""
 msgid "Weight"
 msgstr ""
 
-#. js-lingui-id: nTuObL
+#. js-lingui-id: Q7AEyY
 #: src/pages/auth/SignInUp.tsx
-msgid "Welcome to Twenty"
-msgstr "Добродошли у Twenty"
+msgid "Welcome to Persistent Recruiter"
+msgstr ""
 
 #. js-lingui-id: t8ZvkC
 #: src/pages/auth/SignInUp.tsx
