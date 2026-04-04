@@ -14,8 +14,10 @@ import { MakeWorkflowSearchableCommand } from 'src/database/commands/upgrade-ver
 import { MigrateMessagingInfrastructureToMetadataCommand } from 'src/database/commands/upgrade-version-command/1-20/1-20-migrate-messaging-infrastructure-to-metadata.command';
 import { MigrateRichTextToTextCommand } from 'src/database/commands/upgrade-version-command/1-20/1-20-migrate-rich-text-to-text.command';
 import { SeedCliApplicationRegistrationCommand } from 'src/database/commands/upgrade-version-command/1-20/1-20-seed-cli-application-registration.command';
+import { SyncVideoEntityCommand } from 'src/database/commands/upgrade-version-command/1-20/1-20-sync-video-entity.command';
 import { UpdateStandardIndexViewNamesCommand } from 'src/database/commands/upgrade-version-command/1-20/1-20-update-standard-index-view-names.command';
 import { ApplicationRegistrationModule } from 'src/engine/core-modules/application/application-registration/application-registration.module';
+import { TwentyStandardApplicationModule } from 'src/engine/workspace-manager/twenty-standard-application/twenty-standard-application.module';
 import { ApplicationModule } from 'src/engine/core-modules/application/application.module';
 import { FeatureFlagModule } from 'src/engine/core-modules/feature-flag/feature-flag.module';
 import { UserWorkspaceEntity } from 'src/engine/core-modules/user-workspace/user-workspace.entity';
@@ -51,6 +53,7 @@ import { WorkflowCommonModule } from 'src/modules/workflow/common/workflow-commo
     WorkspaceMigrationRunnerModule,
     ApplicationModule,
     ApplicationRegistrationModule,
+    TwentyStandardApplicationModule,
     WorkspaceMigrationModule,
     FeatureFlagModule,
     WorkflowCommonModule,
@@ -70,6 +73,7 @@ import { WorkflowCommonModule } from 'src/modules/workflow/common/workflow-commo
     MigrateMessagingInfrastructureToMetadataCommand,
     UpdateStandardIndexViewNamesCommand,
     MakeWorkflowSearchableCommand,
+    SyncVideoEntityCommand,
   ],
   exports: [
     IdentifyPermissionFlagMetadataCommand,
@@ -86,6 +90,7 @@ import { WorkflowCommonModule } from 'src/modules/workflow/common/workflow-commo
     MigrateMessagingInfrastructureToMetadataCommand,
     UpdateStandardIndexViewNamesCommand,
     MakeWorkflowSearchableCommand,
+    SyncVideoEntityCommand,
   ],
 })
 export class V1_20_UpgradeVersionCommandModule {}
