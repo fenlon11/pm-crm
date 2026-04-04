@@ -1,3 +1,7 @@
+> **This project is part of pmOS.** Read `~/pmOS/SYSTEM.md` for the full operating system.
+> Read `~/pmOS/.claude/skills/prd/SKILL.md` before planning any task.
+> Read `~/pmOS/.claude/skills/verify/SKILL.md` after every deploy.
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
