@@ -580,4 +580,26 @@ export const buildCandidateStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
+  videos: createStandardRelationFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      type: FieldMetadataType.RELATION,
+      morphId: null,
+      fieldName: 'videos',
+      label: i18nLabel(msg`Videos`),
+      description: i18nLabel(msg`Video intros recorded by this candidate`),
+      icon: 'IconVideo',
+      isNullable: true,
+      targetObjectName: 'video',
+      targetFieldName: 'candidate',
+      settings: {
+        relationType: RelationType.ONE_TO_MANY,
+      },
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
 });
