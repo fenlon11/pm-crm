@@ -31,6 +31,10 @@ export enum AppPath {
 
   Authorize = '/authorize',
 
+  // Videos — Discovery Video feature
+  VideosPage = '/videos',
+  VideosCreate = '/videos/create',
+
   // Public recruiter pages (no auth required)
   JobApply = '/jobs/:workspaceId/:jobId',
 

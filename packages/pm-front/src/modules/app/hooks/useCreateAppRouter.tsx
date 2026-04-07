@@ -112,6 +112,18 @@ const JobApplyPage = lazy(() =>
   })),
 );
 
+const VideosPage = lazy(() =>
+  import('~/pages/videos/VideosPage').then((module) => ({
+    default: module.VideosPage,
+  })),
+);
+
+const VideosCreatePage = lazy(() =>
+  import('~/pages/videos/VideosCreatePage').then((module) => ({
+    default: module.VideosCreatePage,
+  })),
+);
+
 export const useCreateAppRouter = (
   isFunctionSettingsEnabled?: boolean,
   isAdminPageEnabled?: boolean,
@@ -239,6 +251,22 @@ export const useCreateAppRouter = (
                 isFunctionSettingsEnabled={isFunctionSettingsEnabled}
                 isAdminPageEnabled={isAdminPageEnabled}
               />
+            }
+          />
+          <Route
+            path={AppPath.VideosPage}
+            element={
+              <LazyRoute>
+                <VideosPage />
+              </LazyRoute>
+            }
+          />
+          <Route
+            path={AppPath.VideosCreate}
+            element={
+              <LazyRoute>
+                <VideosCreatePage />
+              </LazyRoute>
             }
           />
           <Route
