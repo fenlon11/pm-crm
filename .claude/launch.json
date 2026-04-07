@@ -2,17 +2,21 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "pr-funnel",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/mattfenlon/pmOS/projects/persistent-momentum/pr-funnel", "run", "dev", "--", "-p", "3002"],
+      "port": 3002
+    },
+    {
       "name": "pm-front",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["nx", "start", "pm-front"],
-      "cwd": "/Users/mattfenlon/pmOS/projects/persistent-momentum/pm-crm",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": ["/tmp/start-pm-front.sh"],
       "port": 3001
     },
     {
       "name": "pm-server",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["nx", "start", "pm-server"],
-      "cwd": "/Users/mattfenlon/pmOS/projects/persistent-momentum/pm-crm",
       "port": 3000
     }
   ]
