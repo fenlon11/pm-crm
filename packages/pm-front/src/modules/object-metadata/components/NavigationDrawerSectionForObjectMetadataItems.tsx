@@ -34,6 +34,13 @@ const ORDERED_FIRST_STANDARD_OBJECTS: string[] = [
 const ORDERED_LAST_STANDARD_OBJECTS: string[] = [
   CoreObjectNameSingular.Dashboard,
 ];
+// PR sidebar: hide legacy Twenty objects that are replaced by custom PR objects
+const HIDDEN_FROM_SIDEBAR: string[] = [
+  CoreObjectNameSingular.Person,      // replaced by 'candidate' (future)
+  CoreObjectNameSingular.Opportunity,  // replaced by 'job' (future)
+  CoreObjectNameSingular.Note,         // not used in PR
+];
+
 
 type NavigationDrawerSectionForObjectMetadataItemsProps = {
   sectionTitle: string;
@@ -110,7 +117,7 @@ export const NavigationDrawerSectionForObjectMetadataItems = ({
     ...sortedStandardObjectMetadataItems,
     ...sortedCustomObjectMetadataItems,
     ...sortedLastStandardObjectMetadataItems,
-  ];
+  ].filter(item => !HIDDEN_FROM_SIDEBAR.includes(item.nameSingular));
 
   const objectMetadataItemsForNavigationItemsWithReadPermission =
     objectMetadataItemsForNavigationItems.filter(
