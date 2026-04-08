@@ -21,11 +21,8 @@ const PR_SIDEBAR_HIDDEN_OBJECTS = new Set<string>([
   CoreObjectNameSingular.Workflow,
   CoreObjectNameSingular.WorkflowVersion,
   CoreObjectNameSingular.WorkflowRun,
-  // Custom objects managed via Settings or record detail, not main nav
-  'form',
-  'page',
-  'video',
-  'application',
+  // Custom PR objects — SHOWN in sidebar (candidate, company, job, application, form, video, page)
+  // 'form', 'page', 'video', 'application' — REMOVED from hidden list, these are core PR features
   // Demo objects (not currently in DB, but blocked defensively)
   'pet',
   'petCareAgreement',
